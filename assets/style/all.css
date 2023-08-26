@@ -15794,6 +15794,14 @@ input[readonly] {
           .navbar-info-marquee marquee {
             font-size: 0.7rem;
             line-height: 28px; } }
+  @media (max-width: 1200px) {
+    .navbar-login {
+      position: absolute;
+      top: 16px;
+      right: 12px; } }
+  @media (max-width: 767px) {
+    .navbar-login {
+      right: 55px; } }
   .navbar-btn {
     border: 1px solid #fff;
     color: #fff !important;
@@ -15807,18 +15815,18 @@ input[readonly] {
     .navbar-btn:hover {
       background: #435F71;
       border: 1px solid #23ECD0; }
-    @media (max-width: 1200px) {
-      .navbar-btn[data-con="login"], .navbar-btn[data-con="logout"] {
-        position: absolute;
-        top: 16px;
-        right: 12px; } }
-    @media (max-width: 767px) {
-      .navbar-btn[data-con="login"], .navbar-btn[data-con="logout"] {
-        right: 60px; } }
     .navbar-btn[data-con="logout"] {
       color: #23ECD0 !important;
       font-weight: 600;
       height: 33px; }
+      @media (max-width: 1200px) {
+        .navbar-btn[data-con="logout"] {
+          position: absolute;
+          top: 16px;
+          right: 12px; } }
+      @media (max-width: 767px) {
+        .navbar-btn[data-con="logout"] {
+          right: 60px; } }
       @media (max-width: 523px) {
         .navbar-btn[data-con="logout"] {
           right: 55px; } }
@@ -15881,6 +15889,10 @@ input[readonly] {
   .navbar.up .navbar-brand {
     width: 250px;
     height: 35px; }
+    @media (max-width: 576px) {
+      .navbar.up .navbar-brand {
+        width: 230px;
+        height: 33px; } }
   .navbar.up .navbar-info {
     display: none; }
   .navbar.up .navbar-info-today {
@@ -15914,13 +15926,18 @@ input[readonly] {
     position: absolute;
     top: 18px;
     right: 69px; }
-  .navbar.up [data-con="login"],
+  .navbar.up .navbar-login {
+    position: absolute;
+    top: 18px;
+    right: 12px; }
+    @media (max-width: 767px) {
+      .navbar.up .navbar-login {
+        right: 55px; } }
   .navbar.up [data-con="logout"] {
     position: absolute;
     top: 18px;
     right: 12px; }
     @media (max-width: 767px) {
-      .navbar.up [data-con="login"],
       .navbar.up [data-con="logout"] {
         right: 60px; } }
   .navbar.up [data-con="user"] {
