@@ -15625,11 +15625,11 @@ input[readonly] {
       padding: 48px 0; } }
   @media (max-width: 767px) {
     .main {
-      margin-top: 110px;
+      margin-top: 131px;
       padding: 40px 0; } }
   @media (max-width: 576px) {
     .main {
-      margin-top: 127px; } }
+      margin-top: 156px; } }
 
 /*--------------------主選單開始------------------*/
 .navbar {
@@ -15657,6 +15657,10 @@ input[readonly] {
       .navbar-container {
         padding-top: 16px;
         padding-bottom: 16px; } }
+    @media (max-width: 767px) {
+      .navbar-container {
+        padding-top: 8px;
+        padding-bottom: 12px; } }
   .navbar-brand {
     width: 370px;
     height: 60px;
@@ -15670,11 +15674,8 @@ input[readonly] {
     @media (max-width: 1200px) {
       .navbar-brand {
         width: 100%;
-        height: 40px; } }
-    @media (max-width: 576px) {
-      .navbar-brand {
-        width: 230px;
-        height: 33px; } }
+        width: 310px;
+        height: 50px; } }
   .navbar-toggler {
     border: none;
     width: 30px;
@@ -15781,18 +15782,17 @@ input[readonly] {
           height: 28px; } }
       .navbar-info-marquee marquee {
         height: 100%;
-        line-height: 36px; }
+        line-height: 36px;
+        font-weight: 500; }
         @media (max-width: 1200px) {
           .navbar-info-marquee marquee {
             font-size: 0.9rem;
             line-height: 32px; } }
         @media (max-width: 991px) {
           .navbar-info-marquee marquee {
-            font-size: 0.8rem;
             line-height: 30px; } }
         @media (max-width: 576px) {
           .navbar-info-marquee marquee {
-            font-size: 0.7rem;
             line-height: 28px; } }
   @media (max-width: 1200px) {
     .navbar-login {
@@ -15815,6 +15815,9 @@ input[readonly] {
     .navbar-btn:hover {
       background: #435F71;
       border: 1px solid #23ECD0; }
+    @media (max-width: 767px) {
+      .navbar-btn[data-con="login"] {
+        display: none !important; } }
     .navbar-btn[data-con="logout"] {
       color: #23ECD0 !important;
       font-weight: 600;
@@ -15826,7 +15829,8 @@ input[readonly] {
           right: 12px; } }
       @media (max-width: 767px) {
         .navbar-btn[data-con="logout"] {
-          right: 60px; } }
+          right: 60px;
+          display: none; } }
       @media (max-width: 523px) {
         .navbar-btn[data-con="logout"] {
           right: 55px; } }
@@ -15879,13 +15883,17 @@ input[readonly] {
       width: 100%; } }
   @media (max-width: 576px) {
     .navbar-collapse {
-      top: 154px; } }
+      top: 160px; } }
   @media (max-width: 767px) {
     .navbar.up .navbar-collapse {
-      top: 67px; } }
+      top: 59px; } }
   .navbar.up .navbar-container {
     padding-top: 16px;
     padding-bottom: 16px; }
+    @media (max-width: 767px) {
+      .navbar.up .navbar-container {
+        padding-top: 12px;
+        padding-bottom: 12px; } }
   .navbar.up .navbar-brand {
     width: 250px;
     height: 35px; }
@@ -15893,6 +15901,8 @@ input[readonly] {
       .navbar.up .navbar-brand {
         width: 230px;
         height: 33px; } }
+  .navbar.up .navbar-toggler {
+    margin-top: -3px; }
   .navbar.up .navbar-info {
     display: none; }
   .navbar.up .navbar-info-today {
@@ -15933,12 +15943,12 @@ input[readonly] {
     @media (max-width: 767px) {
       .navbar.up .navbar-login {
         right: 55px; } }
-  .navbar.up [data-con="logout"] {
+  .navbar.up .navbar-btn[data-con="logout"] {
     position: absolute;
     top: 18px;
     right: 12px; }
     @media (max-width: 767px) {
-      .navbar.up [data-con="logout"] {
+      .navbar.up .navbar-btn[data-con="logout"] {
         right: 60px; } }
   .navbar.up [data-con="user"] {
     position: absolute;
@@ -15958,6 +15968,45 @@ input[readonly] {
       margin-top: 0 !important; }
 
 /*-------------首頁登入前後設定--------------*/
+@media (max-width: 767px) {
+  .unlog ~ .main {
+    margin-top: 108px; } }
+
+@media (max-width: 576px) {
+  .unlog ~ .main {
+    margin-top: 132px; } }
+
+.unlog .navbar-login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.unlog .navbar-logout {
+  display: none; }
+
+.unlog .navber-brand {
+  width: 430px;
+  height: 63px; }
+
+@media (max-width: 767px) {
+  .unlog .navbar-collapse {
+    top: 110px; } }
+
+@media (max-width: 576px) {
+  .unlog .navbar-collapse {
+    top: 133px; } }
+
+.unlog .nav-item[data-con="logout"] {
+  display: none; }
+
+@media (max-width: 767px) {
+  .unlog .nav-item[data-con="login"] {
+    display: block; } }
+
+@media (max-width: 767px) {
+  .unlog.up .navbar-collapse {
+    top: 67px; } }
+
 .navbar-login {
   display: none; }
 
@@ -15986,30 +16035,6 @@ input[readonly] {
       width: auto;
       height: 33px; } }
 
-.navbar.unlog .navbar-login {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-
-.navbar.unlog .navbar-logout {
-  display: none; }
-
-.navbar.unlog .navber-brand {
-  width: 430px;
-  height: 63px; }
-
-@media (max-width: 767px) {
-  .navbar.unlog .navbar-collapse {
-    top: 110px; } }
-
-@media (max-width: 576px) {
-  .navbar.unlog .navbar-collapse {
-    top: 131px; } }
-
-@media (max-width: 767px) {
-  .navbar.unlog.up .navbar-collapse {
-    top: 67px; } }
-
 .nav-item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -16027,6 +16052,15 @@ input[readonly] {
       border-bottom: 1px solid #fff; }
       .nav-item:last-child {
         border-bottom: none; } }
+  .nav-item[data-con="login"] {
+    display: none; }
+  .nav-item[data-con="logout"] {
+    display: none; }
+    @media (max-width: 767px) {
+      .nav-item[data-con="logout"] {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; } }
   .nav-item .dropdown-toggle::after {
     width: 24px;
     height: 24px;
@@ -16102,6 +16136,7 @@ input[readonly] {
       display: block;
       top: calc(100% - 2px); }
   .nav-link img {
+    width: 16px;
     -webkit-filter: brightness(20%);
             filter: brightness(20%); }
 

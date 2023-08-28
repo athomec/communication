@@ -29,8 +29,8 @@
 		<!--頁面開始-->
 		<div class="wrapper">
 			<!--主選單開始-->
-<header>
-    <nav class="navbar navbar-expand-md fixed-top js-nav p-0 js-nav ">
+<header class="">
+    <nav class="navbar navbar-expand-md fixed-top p-0 js-nav">
         <div class="navbar-container container align-items-center flex-wrap flex-xl-nowrap position-relative bg-gray-800">
             <a class="navbar-brand me-0" href="index.html" title="陸軍通訊電子器材基地勤務廠">
                 <h1 class="mb-0 font-xs white">
@@ -72,6 +72,12 @@
             <div class="container">
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav mx-auto">
+                        <li class="nav-item" data-con="login">
+                            <a class="nav-link" href="index-login.html" title="登入"><img src="./assets/images/ic-user.svg" class="me-2">登入</a>
+                        </li>
+                        <li class="nav-item" data-con="logout">
+                            <a class="nav-link" href="index.html" title="登出"><img src="./assets/images/ic-user.svg" class="me-2">登出</a>
+                        </li>
                         <li class="nav-item d-flex d-md-none">
                             <a class="nav-link" href="search.html" title="管理後台"><img src="./assets/images/ic-setting.svg" class="me-2">管理後台</a>
                         </li>
@@ -107,8 +113,6 @@
     </nav>
 </header>
 <!--主選單結束-->
-				<a href="#Accesskey_C" class="key position-absolute" id="Accesskey_C" accesskey="C"
-					title="網頁主要內容資料區">:::</a>					
 				<main class="main">
 	<div class="container">
 		<div class="box-main p-4 pt-3 mb-5">
