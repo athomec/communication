@@ -16003,7 +16003,7 @@ input[readonly] {
   .unlog .nav-item[data-con="login"] {
     display: block; } }
 
-.unlog .nav-item[data-con="login-item"] {
+.unlog [data-con="login-item"] {
   display: none; }
 
 @media (max-width: 767px) {
