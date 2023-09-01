@@ -1,0 +1,10 @@
+<svg id="ic-duty" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <g id="Group_1632" data-name="Group 1632">
+    <path id="Path_565" data-name="Path 565" d="M0,0H30V30H0Z" fill="none"/>
+  </g>
+  <g id="Group_1634" data-name="Group 1634" transform="translate(3.75 3.75)">
+    <g id="Group_1633" data-name="Group 1633">
+      <path id="Path_566" data-name="Path 566" d="M18,3H5.5A2.5,2.5,0,0,0,3.013,5.5L3,23a2.5,2.5,0,0,0,2.487,2.5H23A2.507,2.507,0,0,0,25.5,23V10.5ZM5.5,23V5.5H16.75v6.25H23V23Zm5-13.75A1.25,1.25,0,1,1,9.25,8,1.254,1.254,0,0,1,10.5,9.25Zm0,5A1.25,1.25,0,1,1,9.25,13,1.254,1.254,0,0,1,10.5,14.25Zm0,5A1.25,1.25,0,1,1,9.25,18,1.254,1.254,0,0,1,10.5,19.25Z" transform="translate(-3 -3)" fill="#fff"/>
+    </g>
+  </g>
+</svg>
