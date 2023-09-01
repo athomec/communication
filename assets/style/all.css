@@ -16111,7 +16111,10 @@ input[readonly] {
   z-index: 200; }
   @media (max-width: 1200px) {
     .nav-link {
-      padding: 10px 32px !important; } }
+      padding: 10px 30px !important; } }
+  @media (max-width: 1430px) {
+    .nav-link {
+      padding: 10px 20px !important; } }
   @media (max-width: 991px) {
     .nav-link {
       width: 100%;
@@ -18251,6 +18254,11 @@ input[readonly] {
     font-weight: 500; }
     .link-list-link:hover {
       opacity: 0.8; }
+
+/*-----------------寬度樣式---------------------*/
+@media (max-width: 991px) {
+  .w-PC-sm-100 {
+    width: 100% !important; } }
 
 /*-----------------按鈕樣式---------------------*/
 .tab-menu {
