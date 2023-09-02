@@ -16236,10 +16236,8 @@ input[readonly] {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    height: 16px; }
-    @media (max-width: 991px) {
-      .footer-info {
-        font-size: 0.9rem; } }
+    height: 16px;
+    font-size: 0.9rem; }
     @media (max-width: 767px) {
       .footer-info {
         height: auto;
@@ -16253,6 +16251,10 @@ input[readonly] {
       border-right: 1px solid #ABD0E9;
       color: #fff;
       line-height: 1; }
+      @media (max-width: 1430px) {
+        .footer-info-item {
+          margin-right: 12px;
+          padding-right: 12px; } }
       @media (max-width: 767px) {
         .footer-info-item {
           margin-right: 0;
