@@ -16413,6 +16413,7 @@ input[readonly] {
   background-size: cover; }
   @media (max-width: 767px) {
     .main {
+      background: url("../images/bbg.jpg") no-repeat center 30px;
       background-size: 1300px 100%; } }
 
 .info-box {
