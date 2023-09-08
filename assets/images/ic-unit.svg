@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <g id="ic-unit" transform="translate(-2104 -3451)">
+    <g id="briefcase-fill" transform="translate(2105 3454)">
+      <path id="Path_15" data-name="Path 15" d="M11.5,1A2.654,2.654,0,0,0,8.846,3.654v.885H2.654A2.654,2.654,0,0,0,0,7.192V9.641l13.471,3.592a2.654,2.654,0,0,0,1.366,0L28.308,9.641V7.192a2.654,2.654,0,0,0-2.654-2.654H19.462V3.654A2.654,2.654,0,0,0,16.808,1Zm0,1.769h5.308a.885.885,0,0,1,.885.885v.885H10.615V3.654A.885.885,0,0,1,11.5,2.769Z" transform="translate(0 -1)" fill="#fff"/>
+      <path id="Path_16" data-name="Path 16" d="M0,16.846A2.654,2.654,0,0,0,2.654,19.5h23a2.654,2.654,0,0,0,2.654-2.654v-10L14.382,10.56a.885.885,0,0,1-.456,0L0,6.85Z" transform="translate(0 3.5)" fill="#fff"/>
+    </g>
+    <rect id="Rectangle_872" data-name="Rectangle 872" width="30" height="30" transform="translate(2104 3451)" fill="none"/>
+  </g>
+</svg>

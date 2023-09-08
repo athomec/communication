@@ -86,8 +86,8 @@
                                 廠區相關介紹
                             </a>
                             <ul class="dropdown-menu" id="intro">
-                                <li><a class="dropdown-item" href="#">通基廠介紹</a></li>
-                                <li><a class="dropdown-item" href="#">單位介紹</a></li>
+                                <li><a class="dropdown-item" href="intro.html">通基廠介紹</a></li>
+                                <li><a class="dropdown-item" href="intro-unit.html">單位介紹</a></li>
                                 <li><a class="dropdown-item" href="#" data-con="login-item">生活花絮</a></li>
                             </ul>
                         </li>
@@ -100,8 +100,8 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">最新消息</a></li>
-                                <li><a class="dropdown-item" href="#" data-con="login-item">各類勤務公告</a></li>
-                                <li><a class="dropdown-item" href="#" data-con="login-item">計畫專區</a></li>
+                                <li><a class="dropdown-item" href="duty.html" data-con="login-item">各類勤務公告</a></li>
+                                <li><a class="dropdown-item" href="plan.html" data-con="login-item">計畫專區</a></li>
                                 <li><a class="dropdown-item" href="#">通報專區</a></li>
                                 <li><a class="dropdown-item" href="#">職安專區</a></li>
                                 <li><a class="dropdown-item" href="#" data-con="login-item">各式文件下載</a></li>
@@ -378,7 +378,7 @@
             WINDOWH = $(window).height();
             WINDOW = $(window).width();
             if (WINDOW < 769) {
-               $('.js-link-card-list').slick({
+                $('.js-link-card-list').slick({
                     speed: 300,
                     slidesToShow: 1,
                     slidesToScroll: 1,
@@ -451,7 +451,21 @@
             const bsModal = new bootstrap.Modal(myModalEl);
             bsModal.show();
         }, 2000);
+
+        //影片設定
     });
+    var lightBoxVideo = document.getElementById("thevideo");
+    function lightbox_open() {
+        window.scrollTo(0, 0);
+        document.getElementById('light').style.display = 'flex';
+        lightBoxVideo.play();
+    }
+
+    function lightbox_close() {
+        document.getElementById('light').style.display = 'none';
+        lightBoxVideo.currentTime = 0; // 重置影片到開頭
+        lightBoxVideo.pause();
+    }
 </script>
 	</body>
 
