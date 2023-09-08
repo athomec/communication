@@ -40,35 +40,60 @@ $(function () {//JS開頭
 		checkLineBreaks();
 	});
 
+
+
+
+
 	//滑鼠移入下拉選單
 
 	var dropdownToggles = document.querySelectorAll('.js-dropdown-toggle');
 	var dropdown = document.querySelectorAll('.js-dropdown');
+	var isWideScreen = window.innerWidth > 992; // 檢查當前視窗寬度
 
-	// 遍历这些元素，为它们添加事件监听器
-	dropdownToggles.forEach(function (toggle) {
-		// 监听鼠标悬停事件
-		toggle.addEventListener('mouseenter', function () {
-			// 创建并模拟一个鼠标点击事件
-			var clickEvent = new MouseEvent('click', {
-				bubbles: true,
-				cancelable: true,
-				view: window
-			});
-			toggle.dispatchEvent(clickEvent); // 触发点击事件
-		});
+	RESIZE();
 
-	});
-	dropdown.forEach(function (toggle) {
-		// 监听鼠标移出事件
-		toggle.addEventListener('mouseleave', function () {
-			// 隐藏下拉菜单
-			var clickEvent = new MouseEvent('click', {
-				bubbles: true,
-				cancelable: true,
-				view: window
+	function RESIZE() {
+		WINDOWH = $(window).height();
+		WINDOW = $(window).width();
+
+		// 檢查當前視窗寬度是否大於992像素
+		if (WINDOW > 992 && !isWideScreen) {
+			isWideScreen = true; // 更新寬屏幕標誌
+			dropdownToggles.forEach(function (toggle) {
+				toggle.addEventListener('mouseenter', function () {
+					// 模擬滑鼠點擊事件
+					var clickEvent = new MouseEvent('click', {
+						bubbles: true,
+						cancelable: true,
+						view: window
+					});
+					toggle.dispatchEvent(clickEvent); // 觸發點擊事件
+				});
 			});
-			toggle.dispatchEvent(clickEvent); // 触发点击事件
-		});
+			dropdown.forEach(function (toggle) {
+				toggle.addEventListener('mouseleave', function () {
+					// 隐藏下拉選單
+					var clickEvent = new MouseEvent('click', {
+						bubbles: true,
+						cancelable: true,
+						view: window
+					});
+					toggle.dispatchEvent(clickEvent); // 觸發點擊事件
+				});
+			});
+		} else if (WINDOW <= 992 && isWideScreen) {
+			isWideScreen = false; // 更新寬屏幕標誌
+			// 移除事件監聽器
+			dropdownToggles.forEach(function (toggle) {
+				toggle.removeEventListener('mouseenter');
+			});
+			dropdown.forEach(function (toggle) {
+				toggle.removeEventListener('mouseleave');
+			});
+		}
+	}
+
+	$(window).resize(function () {
+		RESIZE();
 	});
 })//JS尾端	
