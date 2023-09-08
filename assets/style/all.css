@@ -22143,9 +22143,9 @@ input[readonly] {
 
 .bootstrap-datetimepicker-widget table td.active,
 .bootstrap-datetimepicker-widget table td.active:hover {
-  background-color: #23ECD0;
-  color: #212529;
-  border-radius: 50%; }
+  background: url("../images/circle.svg") no-repeat center;
+  background-size: 26px;
+  color: #212529; }
 
 .bootstrap-datetimepicker-widget table td.active.today:before {
   border-bottom-color: #fff; }
