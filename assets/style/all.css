@@ -4,7 +4,6 @@
    * Copyright 2011-2023 The Bootstrap Authors
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
 :root,
 [data-bs-theme="light"] {
   --bs-blue: #0d6efd;
@@ -15699,6 +15698,13 @@ progress {
 /*--隱藏區塊內文字--*/
 /* --RWD斷點設定-- */
 /* --漸層填色設定-- */
+/*@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');*/
+@font-face {
+  font-family: "Noto Sans TC";
+  font-weight: 300 900;
+  /*字重範圍*/
+  src: url("../webfonts/NotoSansTC-VariableFont_wght.ttf"); }
+
 /* --------------基本設定開始--------------- */
 *,
 *::before,
@@ -15724,8 +15730,8 @@ body {
   line-height: 1.5;
   letter-spacing: 0.5px;
   color: #212529;
-  /*避免在觸控時文字被選取*/
   -webkit-user-select: none;
+  /*避免在觸控時文字被選取*/
   -webkit-touch-callout: none;
   -moz-user-select: none; }
 

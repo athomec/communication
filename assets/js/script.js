@@ -40,60 +40,60 @@ $(function () {//JS開頭
 		checkLineBreaks();
 	});
 
+// 選擇所有具有相應類名的元素
+var dropdownToggles = document.querySelectorAll('.js-dropdown-toggle');
+var dropdown = document.querySelectorAll('.js-dropdown');
+var isWideScreen = window.innerWidth > 992; // 檢查當前視窗寬度
 
+// 初始化
+RESIZE();
 
+// 檢查視窗大小的函數
+function RESIZE() {
+    // 檢查當前視窗寬度是否大於992像素
+    var isWideScreen = window.innerWidth > 992;
 
+    if (isWideScreen) {
+        // 在滑鼠進入時觸發點擊事件
+        dropdownToggles.forEach(function (toggle) {
+            toggle.addEventListener('mouseenter', function () {
+                // 模擬滑鼠點擊事件
+                var clickEvent = new MouseEvent('click', {
+                    bubbles: true,
+                    cancelable: true,
+                    view: window
+                });
+                toggle.dispatchEvent(clickEvent); // 觸發點擊事件
+            });
+        });
 
-	//滑鼠移入下拉選單
+        // 在滑鼠離開時觸發點擊事件
+        dropdown.forEach(function (toggle) {
+            toggle.addEventListener('mouseleave', function () {
+                // 模擬滑鼠點擊事件
+                var clickEvent = new MouseEvent('click', {
+                    bubbles: true,
+                    cancelable: true,
+                    view: window
+                });
+                toggle.dispatchEvent(clickEvent); // 觸發點擊事件
+            });
+        });
+    } else {
+        // 移除事件監聽器
+        dropdownToggles.forEach(function (toggle) {
+            toggle.removeEventListener('mouseenter');
+        });
+        dropdown.forEach(function (toggle) {
+            toggle.removeEventListener('mouseleave');
+        });
+    }
+}
 
-	var dropdownToggles = document.querySelectorAll('.js-dropdown-toggle');
-	var dropdown = document.querySelectorAll('.js-dropdown');
-	var isWideScreen = window.innerWidth > 992; // 檢查當前視窗寬度
+// 監聽視窗大小改變事件
+window.addEventListener('resize', function () {
+    RESIZE();
+});
 
-	RESIZE();
-
-	function RESIZE() {
-		WINDOWH = $(window).height();
-		WINDOW = $(window).width();
-
-		// 檢查當前視窗寬度是否大於992像素
-		if (WINDOW > 992 && !isWideScreen) {
-			isWideScreen = true; // 更新寬屏幕標誌
-			dropdownToggles.forEach(function (toggle) {
-				toggle.addEventListener('mouseenter', function () {
-					// 模擬滑鼠點擊事件
-					var clickEvent = new MouseEvent('click', {
-						bubbles: true,
-						cancelable: true,
-						view: window
-					});
-					toggle.dispatchEvent(clickEvent); // 觸發點擊事件
-				});
-			});
-			dropdown.forEach(function (toggle) {
-				toggle.addEventListener('mouseleave', function () {
-					// 隐藏下拉選單
-					var clickEvent = new MouseEvent('click', {
-						bubbles: true,
-						cancelable: true,
-						view: window
-					});
-					toggle.dispatchEvent(clickEvent); // 觸發點擊事件
-				});
-			});
-		} else if (WINDOW <= 992 && isWideScreen) {
-			isWideScreen = false; // 更新寬屏幕標誌
-			// 移除事件監聽器
-			dropdownToggles.forEach(function (toggle) {
-				toggle.removeEventListener('mouseenter');
-			});
-			dropdown.forEach(function (toggle) {
-				toggle.removeEventListener('mouseleave');
-			});
-		}
-	}
-
-	$(window).resize(function () {
-		RESIZE();
-	});
 })//JS尾端	
+
