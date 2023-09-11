@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
+	<!--head開始-->
 <head>
     <title>陸軍通信電子器材基地勤務廠</title>
     <meta charset="utf-8">
@@ -17,8 +18,8 @@
     <link rel="stylesheet" href="assets/style/all.css">
     <!--css設定-->
 </head>
-
 	<body>
+		<!--無js的警語-->
 		<noscript>
 			<div class="container">
 				<div class="d-flex justify-content-center bg-gray-100 rounded p-4 text-primary border border-primary mt-6">
@@ -28,6 +29,7 @@
 		</noscript>
 		<!--頁面開始-->
 		<div class="wrapper">
+			<!--選單開始-->
 			<!--主選單開始-->
 <header class="">
     <nav class="navbar navbar-expand-md fixed-top p-0 js-nav">
@@ -88,7 +90,7 @@
                             <ul class="dropdown-menu" id="intro">
                                 <li><a class="dropdown-item" href="intro.html">通基廠介紹</a></li>
                                 <li><a class="dropdown-item" href="intro-unit.html">單位介紹</a></li>
-                                <li><a class="dropdown-item" href="#" data-con="login-item">生活花絮</a></li>
+                                <li><a class="dropdown-item" href="life.html" data-con="login-item">生活花絮</a></li>
                             </ul>
                         </li>
                         <li class="nav-item" data-con="login-item">
@@ -123,6 +125,7 @@
     </nav>
 </header>
 <!--主選單結束-->
+			<!--內容開始-->
 				<main class="main">
 	<div class="container">
         <nav>
@@ -374,6 +377,7 @@
 		</div>
 	</div>
 </main>
+				<!--footer開始-->
 					<!--footer開始-->
 <footer class="footer">
         <a href="#" title="回到上方" class="footer-function mb-2 mb-md-3" data-con="top">TOP</a>
@@ -420,12 +424,14 @@
 <!--主選單結束-->
 
 		</div>
+		<!--script開始-->
 		<!-- SCRIPTS -->
-<script src="assets/js/jquery-1.11.0.min.js"></script>
+<script src="assets/js/jquery-3.7.1.min.js"></script>
 <script src='assets/js/jquery-ui.min.js'></script>
 <script src="assets/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/moment-with-locales.min.js"></script>
 <script src="assets/js/tempusdominus-bootstrap-4.js"></script>
+<script src="assets/js/splide.min.js"></script>
 <script src="assets/js/script.js"></script><!--自訂-->
 <script>
     $(function () {
@@ -467,18 +473,8 @@
         };
         $('#time-range').datetimepicker(datetimepickerRange);
         $('#time-range1').datetimepicker(datetimepickerRange);
-
         var today1 = moment(); // 第一個今天的日期
         var today2 = moment(); // 第二個今天的日期
-
-
-        //自動開啟完成視窗
-        const myModalEl = document.getElementById('done');
-        setTimeout(function () {
-            const bsModal = new bootstrap.Modal(myModalEl);
-            bsModal.show();
-        }, 2000);
-
         //影片設定
     });
     var lightBoxVideo = document.getElementById("thevideo");

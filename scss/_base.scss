@@ -1,0 +1,93 @@
+@charset "utf-8";
+/*@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');*/
+@font-face {
+	font-family: "Noto Sans TC";
+	font-weight: 300 900;/*字重範圍*/
+	src: url("../webfonts/NotoSansTC-VariableFont_wght.ttf");
+  }
+/* --------------基本設定開始--------------- */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	width: 100%;
+	-webkit-text-size-adjust: none;
+}
+html{
+	&.sm {
+		font-size: 0.9rem;
+	}
+	&.lg {
+		font-size: 1.1rem;
+	}
+}
+body {
+	-webkit-font-smoothing: antialiased;
+	-webkit-overflow-scrolling: touch;
+	font-family: "Noto Sans TC", "Microsoft JhengHei", "sans-serif";
+	line-height: 1.5;
+	letter-spacing: 0.5px;
+	color: $gray-900;
+	-webkit-user-select:none;/*避免在觸控時文字被選取*/
+	-webkit-touch-callout:none;
+	-moz-user-select: none;
+}
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+a,
+a:hover,
+button,
+button:hover {
+	transition: all 0.2s ease;
+	text-decoration: none;
+}
+a:focus,button:focus{
+	box-shadow: none !important;
+}
+p {
+	margin-bottom: 0;
+}
+ul {
+	padding-left: 0;
+	list-style: none;
+	margin-bottom: 0;
+}
+ol {
+	margin-bottom: 0;
+}
+input,textarea{
+	border: 1px solid $primary !important;
+	@include mobile-lg{
+		font-size: $h7-font-size !important;
+	}
+}
+select{
+	border: 1px solid $primary !important;
+	background: url("../images/ic-select-down.svg") no-repeat right center $white !important;
+	padding-right: 24px !important;
+	@include mobile-lg{
+		font-size: $h7-font-size !important;
+	}
+}
+input::placeholder,textarea::placeholder {
+	color: $gray-500!important;
+	@include mobile-lg{
+		font-size: $h7-font-size !important;
+	}
+}
+
+input[readonly]{
+	border: 1px solid $primary !important;
+}
+.form-check,select~label{
+	@include mobile-lg{
+		font-size: $h7-font-size !important;
+	}
+}

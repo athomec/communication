@@ -1,0 +1,14 @@
+<svg id="ic-id" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="Group_1593" data-name="Group 1593">
+    <rect id="Rectangle_813" data-name="Rectangle 813" width="24" height="24" fill="none"/>
+  </g>
+  <g id="Group_1595" data-name="Group 1595">
+    <g id="Group_1594" data-name="Group 1594">
+      <rect id="Rectangle_814" data-name="Rectangle 814" width="4" height="1.5" transform="translate(14 12)" fill="#333"/>
+      <rect id="Rectangle_815" data-name="Rectangle 815" width="4" height="1.5" transform="translate(14 15)" fill="#333"/>
+      <path id="Path_554" data-name="Path 554" d="M20,7H15V4a2.006,2.006,0,0,0-2-2H11A2.006,2.006,0,0,0,9,4V7H4A2.006,2.006,0,0,0,2,9V20a2.006,2.006,0,0,0,2,2H20a2.006,2.006,0,0,0,2-2V9A2.006,2.006,0,0,0,20,7ZM11,7V4h2V9H11Zm9,13H4V9H9a2.006,2.006,0,0,0,2,2h2a2.006,2.006,0,0,0,2-2h5Z" fill="#333"/>
+      <circle id="Ellipse_13" data-name="Ellipse 13" cx="1.5" cy="1.5" r="1.5" transform="translate(7.5 12)" fill="#333"/>
+      <path id="Path_555" data-name="Path 555" d="M11.08,16.18a5.246,5.246,0,0,0-4.16,0A1.506,1.506,0,0,0,6,17.57V18h6v-.43A1.506,1.506,0,0,0,11.08,16.18Z" fill="#333"/>
+    </g>
+  </g>
+</svg>

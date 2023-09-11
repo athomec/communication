@@ -1,0 +1,856 @@
+.key {
+    color: $gray-300;
+    font-size: $h8-font-size;
+}
+/*-----------------麵包屑樣式---------------------*/
+.breadcrumb {
+    margin-top: -12px;
+    &-item {
+        color: $base-light !important;
+        font-size: $h7-font-size;
+    }
+    &-link {
+        color: $base-light;
+        display: flex;
+        align-items: center;
+        &:hover {
+            color: $special;
+            img {
+                filter: invert(48%) sepia(42%) saturate(3660%) hue-rotate(162deg) brightness(96%) contrast(101%);
+            }
+        }
+        img {
+            width: 16px;
+            margin-right: 4px;
+        }
+    }
+}
+.breadcrumb-item + .breadcrumb-item::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 100%;
+    background: url("../images/ic-route.svg") no-repeat center;
+    margin-right: 8px;
+}
+/*-----------------標題樣式---------------------*/
+.page-title {
+    color: $white;
+    display: flex;
+    align-items: center;
+    font-size: $h4-font-size;
+    font-weight: $font-weight-bold;
+    padding-bottom: 8px;
+    border-bottom: 2px solid $primary;
+    img {
+        width: 24px;
+    }
+}
+.article-title {
+    display: flex;
+    align-items: start;
+    color: $white;
+    font-size: $h4-font-size;
+    margin-left: -24px;
+    line-height: 1.5;
+    @include Pad {
+        font-size: $h5-font-size;
+    }
+}
+.sub-title {
+    font-size: $h5-font-size;
+}
+@each $color, $value in $theme-colors {
+    .main-title-#{$color} {
+        border-bottom: 1px solid $value;
+        display: flex;
+        p {
+            background: $value;
+            color: $gray-800;
+            font-size: $h5-font-size;
+            font-weight: $font-weight-semibold;
+            padding: 5px 20px 5px 24px;
+            display: inline-flex;
+            position: relative;
+            @include Pad {
+                padding: 6px 16px 7px 20px;
+                font-size: $h6-font-size;
+            }
+            @include mobile-lg {
+                padding: 6px 10px 7px 12px;
+            }
+            &::after {
+                content: "";
+                width: 0;
+                display: inline-block;
+                position: absolute;
+                right: -26px;
+                top: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 33px 0 0 33px;
+                border-color: transparent transparent transparent $value;
+                transform: scaleX(0.6);
+            }
+            img{
+                width: 18px;
+            }
+        }
+    }
+    .sub-title-#{$color} {
+        font-size: $h4-font-size;
+        color: $value;
+        padding-bottom: 8px;
+        border-bottom: 4px solid $value;
+        @include Pad {
+            font-size: $h5-font-size;
+        }
+    }
+}
+.main-title-btn {
+    border: 1px solid $primary !important;
+    color: $primary !important;
+    font-weight: $font-weight-semibold;
+    font-size: $h7-font-size;
+    height: 27px;
+    padding: 0 16px;
+    @include Pad {
+        padding: 0 12px;
+    }
+    @include mobile-lg {
+        padding: 0 8px;
+        font-size: $h8-font-size;
+    }
+    &:hover {
+        background: $primary-dark;
+    }
+}
+.tag-title {
+    color: $base-light;
+    font-size: $h5-font-size;
+    display: flex;
+    span {
+        background: $base-light;
+        color: $base;
+        border-radius: 4px;
+        font-size: $h6-font-size;
+        font-weight: $font-weight-semibold;
+        padding: 0 12px;
+    }
+}
+
+/*-----------------連結樣式---------------------*/
+.link-img {
+    display: inline-block;
+    &:hover {
+        opacity: 0.8;
+    }
+}
+.link-list {
+    border-left: 1px solid $primary;
+    padding-left: 24px;
+    @include Pad {
+        padding-left: 16px;
+    }
+    &-link {
+        display: block;
+        padding: 8px 0;
+        color: $black;
+        font-weight: $font-weight-medium;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+/*-----------------寬度樣式---------------------*/
+.w-PC-sm-100 {
+    @include PC-sm {
+        width: 100% !important;
+    }
+}
+/*-----------------按鈕樣式---------------------*/
+.tab {
+    &-menu {
+        display: flex;
+        width: 165px;
+        @include PC-sm {
+            width: 100%;
+        }
+    }
+    &-menu-btn {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        background: $gray-100;
+        border: 1px solid $primary;
+        color: $gray-700;
+        border-radius: 0 !important;
+        padding: 9px 12px;
+        font-weight: $font-weight-semibold;
+        font-size: $h5-font-size;
+        @include Pad {
+            font-size: $h6-font-size;
+        }
+        &:hover {
+            border: 1px solid $primary;
+        }
+        &.active {
+            border: 1px solid $primary;
+            border-left: 5px solid $primary;
+            color: $primary;
+            img {
+                filter: invert(33%) sepia(95%) saturate(640%) hue-rotate(134deg) brightness(60%) contrast(102%);
+            }
+        }
+        img {
+            width: 24px;
+        }
+    }
+    &-action {
+        display: flex;
+        justify-content: center;
+        @include PC-sm {
+            width: 100%;
+        }
+    }
+}
+@each $color, $value in $theme-colors {
+    .tag-#{$color} {
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        border: 1px solid $value;
+        border-radius: 5px;
+        color: $value;
+        font-size: $h7-font-size;
+        padding: 0;
+        @include Pad {
+            font-size: $h8-font-size;
+        }
+    }
+}
+/*-----------------列表樣式---------------------*/
+.txt-list {
+    font-size: $h7-font-size;
+    li {
+        line-height: 1.7;
+    }
+}
+.tag-list {
+    &-item {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid $base-light;
+        margin-bottom: 12px;
+        &:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+    }
+    &-link {
+        display: flex;
+        flex-direction: column;
+        color: $white;
+        padding: 10px 0;
+        font-size: $h6-font-size;
+        @include PC-sm {
+            padding: 12px 0;
+        }
+        @include mobile-lg {
+            font-size: $h7-font-size;
+        }
+        &:hover {
+            .tag-list-txt {
+                text-decoration: underline;
+            }
+        }
+    }
+    &-txt {
+        display: flex;
+        align-items: start;
+        p {
+            @include over_text(1);
+            @include Pad {
+                @include over_text(2);
+            }
+        }
+    }
+    &-info {
+        font-size: $h7-font-size;
+    }
+}
+.img-list {
+    display: flex;
+    flex-wrap: wrap;
+    &-item {
+        width: 17.6%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 3%;
+        margin-bottom: 40px;
+        font-weight: $font-weight-bold;
+        &:nth-child(5n){
+            margin-right: 0;
+        }
+        @include PC{
+            width: 22.75%;
+            margin-bottom: 32px;
+            &:nth-child(5n){
+            margin-right: 3%;
+        }
+            &:nth-child(4n){
+            margin-right: 0;
+        }
+        }
+        @include PC-sm{
+            width: 31.33%;
+            margin-bottom: 30px;
+            font-size: $h7-font-size;
+            &:nth-child(4n){
+            margin-right: 3%;
+        }
+            &:nth-child(3n){
+            margin-right: 0;
+        }
+        }
+        @include Pad{
+            width: 47%;
+            margin-bottom: 24px;
+            margin-right: 6% !important;
+            &:nth-child(2n){
+            margin-right: 0 !important;
+        }
+        }
+    }
+    &-pic {
+        overflow: hidden;
+        height: 145px;
+        border-radius: 8px;
+        margin-bottom: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include PC{
+            height: 140px;
+        }
+        @include PC-sm{
+            height: 130px;
+        }
+        @include Pad{
+            height: 120px;
+        }
+        @include mobile-md{
+            height: 100px;
+        }
+        img{
+            height: 100%;
+            width: auto;
+            max-width: 200%;
+        }
+    }
+}
+.theme-list {
+    &-title {
+        display: flex;
+        align-items: center;
+        color: $base-light;
+        font-size: $h5-font-size;
+        img {
+            width: 48px;
+            @include mobile-lg {
+                width: 40px;
+            }
+        }
+    }
+    &-item {
+        &-title {
+            display: inline-block;
+            position: relative;
+            background: $base-light;
+            color: $base;
+            margin-bottom: 0;
+            font-size: $h5-font-size;
+            font-weight: $font-weight-bold;
+            height: 27px;
+            line-height: 27px;
+            @include mobile-lg {
+                font-size: $h6-font-size;
+            }
+            &::after {
+                content: "";
+                width: 0;
+                display: inline-block;
+                position: absolute;
+                right: -21px;
+                top: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 27px 0 0 27px;
+                border-color: transparent transparent transparent $base-light;
+                transform: scaleX(0.6);
+            }
+        }
+        &-body {
+            background: lighten($color: $base, $amount: 5%);
+            color: $white;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            @include mobile-lg {
+                font-size: $h7-font-size;
+            }
+            &::before {
+                transform: rotate(90deg);
+                content: "";
+                display: block;
+                position: absolute;
+                right: 12px;
+                top: 10px;
+                width: 21px;
+                height: 21px;
+                background: url("../images/ic-route.svg") no-repeat center;
+                background-size: 8px;
+                transition: all 0.2s ease;
+                display: none;
+            }
+            &.active {
+                &:before {
+                    transform: rotate(-90deg);
+                }
+                p {
+                    overflow: initial;
+                    text-overflow: initial;
+                    display: block;
+                }
+            }
+            &.hasbreaks {
+                &:before {
+                    display: block;
+                }
+            }
+            p {
+                display: block;
+                @include over_text(1);
+            }
+        }
+    }
+}
+/*-----------------表格樣式---------------------*/
+.table-rwd {
+    min-width: 100%;
+    @include PC {
+        font-size: $h7-font-size;
+    }
+    @include PC-sm {
+        margin: 0 auto;
+    }
+    tr {
+        background: $base;
+        border: none;
+        background: lighten($color: $base, $amount: 2%);
+        &:nth-child(even) {
+            background: lighten($color: $base, $amount: 6%);
+            @include PC-sm {
+                background: lighten($color: $base, $amount: 2%);
+            }
+        }
+        @include PC-sm {
+            display: block;
+            margin-bottom: 20px;
+        }
+    }
+    th {
+        display: table-cell;
+        background: $base-light;
+        color: $gray-800;
+        font-weight: $font-weight-semibold;
+        vertical-align: middle;
+        font-size: $h6-font-size;
+        padding: 8px;
+        @include PC-sm {
+            display: none;
+            font-size: $h7-font-size;
+        }
+    }
+    td {
+        display: table-cell;
+        vertical-align: middle;
+        padding: 16px 8px;
+        color: $white;
+        @include PC-sm {
+            display: flex;
+            text-align: left !important;
+            align-items: start;
+            padding: 4px 20px !important;
+            position: relative;
+            font-size: $h7-font-size;
+            &[data-th=""] {
+                &::before {
+                    content: "";
+                    display: none;
+                }
+            }
+        }
+        &:first-child {
+            @include PC-sm {
+                background: $base-light;
+                color: $gray-800;
+                &:before {
+                    color: $gray-800;
+                }
+            }
+        }
+        &:nth-child(2) {
+            @include PC-sm {
+                padding-top: 16px !important;
+            }
+        }
+        &:last-child {
+            @include PC-sm {
+                padding-bottom: 16px !important;
+            }
+        }
+        &:before {
+            display: none;
+            @include PC-sm {
+                flex-shrink: 0;
+                content: attr(data-th) "：";
+                display: inline-block;
+                color: $primary;
+                font-weight: $font-weight-medium;
+            }
+        }
+    }
+}
+.table-link {
+    color: $white;
+    line-height: 1;
+    @include over_text(1);
+    @include PC-sm {
+        @include over_text(2);
+        line-height: 1.5;
+    }
+    &:hover {
+        opacity: 0.8;
+    }
+    &-badge {
+        display: inline-block;
+        padding-right: 8px;
+        margin-right: 8px;
+        border-right: 1px solid $gray-300;
+        line-height: 1;
+    }
+}
+.table-btn {
+    border: 1px solid $primary;
+    border-radius: 5px;
+    color: $primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 12px;
+    font-size: $h7-font-size;
+    &:hover {
+        background: $primary-dark;
+    }
+    img {
+        width: 16px;
+    }
+}
+.table-group {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    @include mobile-md {
+        flex-direction: column;
+        align-items: start;
+    }
+}
+.table-sign {
+    margin: 0 auto;
+    @include PC-sm {
+        margin: 0;
+        display: inline-block;
+    }
+}
+
+/*-----------------卷軸樣式---------------------*/
+.scrollbar {
+    width: 100%;
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    &::-webkit-scrollbar-track {
+        background-color: $gray-300;
+    }
+    &::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+        background-color: $gray-300;
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: $gray-500;
+    }
+}
+/*-----------------表單樣式---------------------*/
+.input-search {
+    display: flex;
+    align-items: center;
+    label {
+        font-size: $h5-font-size;
+    }
+    input {
+        border-radius: 50px 0 0 50px !important;
+        border: 1px solid $primary !important;
+        border-right: 0 !important;
+        padding-left: 20px;
+        height: 45px;
+        @include PC-sm {
+            height: 34px;
+        }
+        &:focus {
+            box-shadow: none;
+        }
+        &::placeholder {
+            color: $gray-600 !important;
+            @include PC-sm {
+                font-size: $h7-font-size;
+            }
+        }
+    }
+    input ~ button {
+        border-radius: 0 50px 50px 0 !important;
+        border: 1px solid $primary;
+        border-left: 0;
+        background: $white !important;
+        height: 45px;
+        @include PC-sm {
+            height: 34px;
+        }
+        &:hover {
+            img {
+                opacity: 0.8;
+            }
+        }
+    }
+}
+/*-----------------視窗樣式---------------------*/
+.modal {
+    &-header {
+        align-items: flex-start;
+        border-bottom: none;
+        position: relative;
+        font-size: $h5-font-size;
+        font-weight: $font-weight-semibold;
+        padding-left: 24px;
+        padding-right: 24px;
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 24px;
+            bottom: 0;
+            width: calc(100% - 48px);
+            height: 1px;
+            background: $primary;
+        }
+        .btn-close {
+            background: url("../images/ic-close.svg") no-repeat center;
+            background-size: 80%;
+            opacity: 1;
+            @include text-indent;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+    &-content {
+        border-radius: 16px !important;
+    }
+    &-body {
+        font-size: $h6-font-size;
+        @include mobile-lg {
+            font-size: $h7-font-size;
+        }
+    }
+}
+/*-----------------頁數樣式---------------------*/
+
+.page {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    @include PC {
+        font-size: $h7-font-size;
+    }
+    @include mobile-lg {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &-list {
+        display: flex;
+        justify-content: flex-end;
+        @include mobile-lg {
+            margin-bottom: 12px;
+            border-right: none;
+            padding-right: 0;
+            margin-right: 0;
+        }
+    }
+    &-item {
+        padding: 0 4px;
+        display: flex;
+        align-items: center;
+        color: $white;
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-last-child(1),
+        &:nth-last-child(2) {
+            .page-link {
+                background: $base-light;
+                border: 1px solid $base-light;
+            }
+        }
+        .form-control {
+            width: 40px;
+            height: 28px;
+            color: $primary;
+            border: 1px solid $primary;
+            border-radius: 5px;
+            margin: 0 5px;
+            padding: 0 8px;
+            text-align: center;
+        }
+    }
+    &-link {
+        border-radius: 4px;
+        background: $base;
+        border: 1px solid $primary;
+        color: $white;
+        padding: 0;
+        width: 25px;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.2s ease;
+        &:hover {
+            background: $gray-100;
+        }
+        &.active {
+            border: 2px solid $primary;
+            background: $primary;
+            color: $gray-800;
+            font-weight: $font-weight-medium;
+        }
+        img {
+            width: 25px;
+            margin-right: 0;
+        }
+        &-function {
+            border-radius: 4px;
+        }
+    }
+    &-form {
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+        color: $white;
+        span {
+            flex-shrink: 0;
+        }
+        input {
+            padding-left: 6px;
+            padding-right: 6px;
+            text-align: center;
+            height: 25px;
+            @include PC {
+                font-size: $h7-font-size;
+            }
+        }
+    }
+}
+
+/*-----------------區塊樣式---------------------*/
+@each $color, $value in $theme-colors {
+    .inbox-#{$color} {
+        border: 1px solid $value;
+        border-radius: 8px;
+        overflow: hidden;
+        .inbox-header {
+            display: flex;
+            align-items: center;
+            background: $value;
+            color: $gray-800;
+            font-weight: $font-weight-bold;
+            p {
+                font-size: $h5-font-size;
+            }
+        }
+    }
+}
+.card{
+    border: 1px solid $primary;
+    background: $primary-dark;
+    &-img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        height: 100%;
+        position: relative;
+        @include Pad{
+            height: auto;
+        }
+        img{
+            max-width: 300%;
+            height: 100%;
+            @include Pad{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+    &-video{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba($gray-800, 0.5);
+        cursor: pointer;
+        &:hover{
+            background: none;
+            img{
+                width: 104px;
+            }
+        }
+        img{
+            width: 88px;
+            transition: all 0.2s ease;
+            @include Pad{
+                width: 70px;
+            }
+        }
+    }
+    &-title{
+        color: $primary;
+        border-bottom: 2px solid $primary;
+        padding-bottom: 8px;
+        font-weight: $font-weight-bold;
+        font-size: $h5-font-size;
+        @include Pad{
+            font-size: $h6-font-size;
+        }
+    }
+    &-text{
+        font-size: $h7-font-size;
+    }
+}
