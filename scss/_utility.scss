@@ -740,6 +740,7 @@
         transition: all 0.2s ease;
         &:hover {
             background: $gray-100;
+            color: $gray-800;
         }
         &.active {
             border: 2px solid $primary;

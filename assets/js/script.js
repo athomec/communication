@@ -23,6 +23,10 @@ $(function () {//JS開頭
         $(".js-photo-slide").addClass("show");
         return false;
     })
+    $(".js-close-photo-slide").click(function () {
+        $(".js-photo-slide").removeClass("show");
+        return false;
+    })
 
     //菜單斷行判斷
     function checkLineBreaks() {
