@@ -15846,6 +15846,31 @@ input[readonly] {
     .main {
       margin-top: 156px; } }
 
+.loading {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #23ECD0; }
+  @media (max-width: 767px) {
+    .loading {
+      width: 150px;
+      height: 150px;
+      font-size: 0.9rem; } }
+  .loading img {
+    position: absolute;
+    left: 0;
+    top: 0; }
+
 /*--------------------主選單開始------------------*/
 .navbar {
   display: block !important;
@@ -21475,7 +21500,7 @@ input[readonly] {
 
 #main-carousel {
   margin-bottom: 12px;
-  height: calc(80vh - 200px);
+  height: calc(90vh - 200px);
   border-radius: 5px;
   overflow: hidden; }
   @media (max-width: 1200px) {

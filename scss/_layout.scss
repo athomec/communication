@@ -33,6 +33,26 @@
 		margin-top: 156px;
 	}
 }
+.loading{
+	position: absolute;
+	width: 180px;
+	height: 180px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: $primary;
+	@include Pad{
+		width: 150px;
+		height: 150px;
+		font-size: $h7-font-size;
+	}
+	img{
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+}
 /*--------------------主選單開始------------------*/
 .navbar {
 	display: block !important;
