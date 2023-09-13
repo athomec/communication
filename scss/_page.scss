@@ -507,7 +507,7 @@
         width: 90%;
     }
 }
-#light {
+#light,#showpic {
     width: 100%;
     height: 100vh;
     justify-content: center;
@@ -519,6 +519,7 @@
     top: 0;
     z-index: 2010;
     margin: 0 auto;
+    transition: all 0.2s ease;
 }
 
 #boxclose {
@@ -538,7 +539,19 @@
         opacity: 0.8;
     }
 }
-
+.showpic-img {
+    border-radius: 5px;
+    overflow: hidden;
+    object-fit: cover;
+    width: 70%;
+    max-height: 80vh;
+    @include Pad {
+        width: 90%;
+    }
+    img{
+        width: 100%;
+    }
+}
 .unit-link {
     position: relative;
     &-title {
@@ -753,36 +766,124 @@
 .splide {
     width: 80%;
     max-width: 1200px;
+    @include Pad{
+            width: 90%;
+    }
     &-header {
         width: 80%;
         max-width: 1200px;
         max-height: 750px;
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         margin-bottom: 12px;
         font-size: $h7-font-size;
+        @include Pad{
+            width: 90%;
+        }
     }
     &-title{
         font-size: $h4-font-size;
         font-weight: $font-weight-bold;
+        @include Pad{
+            width: 100%;
+        }
     }
 }
 #main-carousel {
     margin-bottom: 12px;
+    height: calc(80vh - 200px);
+    border-radius: 5px;
+    overflow: hidden;
+    @include PC{
+        max-height: 400px;
+    }
+    @include Pad{
+        height: auto;
+        max-height: 350px;
+    }
+    .splide__track{
+        height: 100%;
+    }
+    .splide__slide{
+        height: 100%;
+    }
+    video{
+        width: 100%;
+        height: 100%;
+    }
 }
 .splide__slide {
     height: 70vh;
     overflow: hidden;
     border-radius: 5px;
+    position: relative;
     img {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
 }
-
+#thumbnail-carousel{
+    padding: 0 60px !important;
+    @include PC{
+        padding: 0 47px !important;
+    }
+    @include Pad{
+        padding: 0 42px !important;
+    }
+    .splide__slide.is-active {
+    border: 3px solid $primary;;
+}
+.thumbnail-video{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: url("../images/ic-play.svg") no-repeat center rgba($black, 0.3);
+    background-size: 32px;
+    &:hover{
+        background: url("../images/ic-play.svg") no-repeat center;
+        background-size: 32px;
+    }
+}
+}
 .splide__slide.is-active {
     opacity: 1;
+}
+
+.splide__arrow{
+    background: $base !important;
+    width: 45px !important;
+    height: 100% !important;
+    opacity: 1 !important;
+    @include PC{
+        width: 35px !important;
+    }
+    @include Pad{
+        width: 30px !important;
+    }
+    &:hover{
+        background: $primary-dark !important;
+    }
+    svg{
+        fill: $white !important;
+        @include PC{
+            width: 14px;
+        }
+        @include Pad{
+            width: 12px;
+        }
+    }
+}
+.splide__arrow--next{
+    border-radius: 0 10px 10px 0 !important;
+    right: 0 !important;
+}
+.splide__arrow--prev{
+    border-radius: 10px 0 0 10px !important;
+    left: 0 !important;
 }
 
 //其他

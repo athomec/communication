@@ -142,6 +142,8 @@
 /*-----------------連結樣式---------------------*/
 .link-img {
     display: inline-block;
+    cursor: pointer;
+    transition: all 0.2s ease;
     &:hover {
         opacity: 0.8;
     }
@@ -332,6 +334,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        &:hover{
+            opacity: 0.8;
+        }
         @include PC{
             height: 140px;
         }
@@ -526,11 +533,28 @@
 }
 .table-link {
     color: $white;
-    line-height: 1;
+    line-height: 1.3;
+    padding-top: 2px;
+    width: 100%;
+    img{
+        display: inline-block;
+        margin-top: -2px;
+    }
     @include over_text(1);
     @include PC-sm {
+        display: flex !important;
+        align-items: flex-start;
         @include over_text(2);
         line-height: 1.5;
+    }
+    &[data-func="nolink"]{
+        justify-content: center;
+        @include PC-sm{
+            justify-content: flex-start;
+        }
+        &:hover{
+            opacity: 1;
+        }
     }
     &:hover {
         opacity: 0.8;

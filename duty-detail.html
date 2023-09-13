@@ -235,69 +235,59 @@
         };
         $('#time-start').datetimepicker(datetimepickerOptions);
         $('#time-end').datetimepicker(datetimepickerOptions);
-
-        //相簿設定
-        /*document.addEventListener('DOMContentLoaded', function () {
-            var main = new Splide('#main-carousel', {
-                type: 'fade',
-                rewind: true,
-                pagination: false,
-                arrows: false,
-            });
-
-
-            var thumbnails = new Splide('#thumbnail-carousel', {
-                fixedWidth: 100,
-                fixedHeight: 60,
-                gap: 10,
-                rewind: true,
-                pagination: false,
-                isNavigation: true,
-                breakpoints: {
-                    600: {
-                        fixedWidth: 60,
-                        fixedHeight: 44,
-                    },
-                },
-            });
-
-
-            main.sync(thumbnails);
-            main.mount();
-            thumbnails.mount();
-        });*/
     });
 
     //相簿設定
-    document.addEventListener( 'DOMContentLoaded', function () {
-  var main = new Splide( '#main-carousel', {
-    type      : 'fade',
-    rewind    : true,
-    pagination: false,
-    arrows    : false,
-  } );
+    document.addEventListener('DOMContentLoaded', function () {
+        var main = new Splide('#main-carousel', {
+            type: 'fade',
+            rewind: true,
+            pagination: false,
+            arrows: false,
+        });
 
 
-  var thumbnails = new Splide( '#thumbnail-carousel', {
-    fixedWidth  : 122,
-    fixedHeight : 100,
-    gap         : 10,
-    rewind      : true,
-    pagination  : false,
-    isNavigation: true,
-    breakpoints : {
-      600: {
-        fixedWidth : 60,
-        fixedHeight: 44,
-      },
-    },
-  } );
+        var thumbnails = new Splide('#thumbnail-carousel', {
+            fixedWidth: 122,
+            fixedHeight: 100,
+            gap: 10,
+            rewind: true,
+            pagination: false,
+            isNavigation: true,
+            breakpoints: {
+                1024: {
+                    fixedWidth: 100,
+                    fixedHeight: 80,
+                },
+                600: {
+                    fixedWidth: 80,
+                    fixedHeight: 60,
+                    gap: 8,
+                }
+            },
+        });
 
 
-  main.sync( thumbnails );
-  main.mount();
-  thumbnails.mount();
-} );
+        main.sync(thumbnails);
+        main.mount();
+        thumbnails.mount();
+
+        // 在主要滑塊切換時停止和播放影片
+        main.on('move', function (newIndex) {
+            var videos = document.querySelectorAll('.js-splide-video');
+
+            // 暫停所有影片
+            videos.forEach(function (video) {
+                video.pause();
+            });
+
+            // 播放新選中的影片
+            var currentVideo = videos[newIndex];
+            if (currentVideo) {
+                currentVideo.play();
+            }
+        });
+    });
 
 
 
@@ -314,6 +304,16 @@
         lightBoxVideo.currentTime = 0; // 重置影片到開頭
         lightBoxVideo.pause();
     }
+    //大圖設定
+    function showbox_open() {
+            window.scrollTo(0, 0);
+            document.getElementById('showpic').style.display = 'flex';
+        }
+    function showbox_close() {
+            document.getElementById('showpic').style.display = 'none';
+        }
+
+
 </script>
 	</body>
 
