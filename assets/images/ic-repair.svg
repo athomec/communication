@@ -1,0 +1,15 @@
+<svg id="ic-repair" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+  <g id="Group_1667" data-name="Group 1667">
+    <rect id="Rectangle_852" data-name="Rectangle 852" width="28" height="28" fill="none"/>
+  </g>
+  <g id="Group_1671" data-name="Group 1671" transform="translate(2.333 1.167)">
+    <g id="Group_1670" data-name="Group 1670">
+      <g id="Group_1668" data-name="Group 1668" transform="translate(12.647 13.848)">
+        <path id="Path_583" data-name="Path 583" d="M23.142,19.053,16.958,12.87H15.8L12.84,15.833v1.155l6.183,6.183a1.162,1.162,0,0,0,1.645,0L23.142,20.7A1.162,1.162,0,0,0,23.142,19.053Zm-3.3,1.657-4.947-4.947.828-.828,4.947,4.947Z" transform="translate(-12.84 -12.87)" fill="#57d1ff"/>
+      </g>
+      <g id="Group_1669" data-name="Group 1669">
+        <path id="Path_584" data-name="Path 584" d="M19.9,11.722l1.645-1.645,2.473,2.473a3.5,3.5,0,0,0,0-4.947l-4.13-4.13L18.24,5.118V1.828L17.423,1l-4.13,4.13.828.828h3.3L15.778,7.6,17.015,8.84l-3.372,3.372L8.825,7.393V5.737L5.3,2.213,2,5.515,5.535,9.05H7.18L12,13.868l-.992.992H8.533L2.35,21.043a1.162,1.162,0,0,0,0,1.645l2.473,2.473a1.162,1.162,0,0,0,1.645,0l6.183-6.183V16.5L18.66,10.5Zm-9.31,6.008L5.64,22.677l-.828-.828L9.758,16.9h0l.828.828Z" transform="translate(-2 -1)" fill="#57d1ff"/>
+      </g>
+    </g>
+  </g>
+</svg>

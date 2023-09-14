@@ -499,6 +499,26 @@
         line-height: 1;
     }
 }
+.base-link {
+    border: 1px solid $primary;
+    border-radius: 8px;
+    background: $base;
+    color: $white;
+    display: flex;
+    align-items: center;
+    padding: 8px 16px 8px 24px;
+    line-height: 1.5;
+    @include Pad {
+        padding: 8px 16px;
+    }
+    &:hover {
+        background: $primary-dark;
+    }
+    img{
+        width: 20px;
+    }
+
+}
 /*-------影片開始-----------*/
 
 #thevideo {
