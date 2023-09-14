@@ -726,7 +726,11 @@
     color: $white;
     background: $base-pale;
     font-size: $h7-font-size;
+    @include mobile-lg{
+        flex-direction: column;
+    }
     img {
+        width: 16px;
         filter: brightness(500%);
     }
 }
@@ -800,6 +804,9 @@
         font-size: $h7-font-size;
         @include Pad{
             width: 90%;
+        }
+        img{
+            width: 16px;
         }
     }
     &-title{

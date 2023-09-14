@@ -27715,7 +27715,17 @@ input[readonly] {
   font-size: 0.9rem;
 }
 
+@media (max-width: 576px) {
+  .top-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .top-info img {
+  width: 16px;
   -webkit-filter: brightness(500%);
           filter: brightness(500%);
 }
@@ -27827,6 +27837,10 @@ input[readonly] {
   .splide-header {
     width: 90%;
   }
+}
+
+.splide-header img {
+  width: 16px;
 }
 
 .splide-title {

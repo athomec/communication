@@ -21422,7 +21422,14 @@ input[readonly] {
   color: #fff;
   background: #48667A;
   font-size: 0.9rem; }
+  @media (max-width: 576px) {
+    .top-info {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
   .top-info img {
+    width: 16px;
     -webkit-filter: brightness(500%);
             filter: brightness(500%); }
 
@@ -21512,6 +21519,8 @@ input[readonly] {
     @media (max-width: 767px) {
       .splide-header {
         width: 90%; } }
+    .splide-header img {
+      width: 16px; }
   .splide-title {
     font-size: 1.3rem;
     font-weight: 700; }
