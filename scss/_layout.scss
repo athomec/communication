@@ -112,7 +112,6 @@
 	&-info {
 		display: flex;
 		flex-direction: column;
-		align-items: center;
 		border-right: 1px solid $white;
 		flex-wrap: nowrap;
 		@include PC {
@@ -128,7 +127,7 @@
 		&-today {
 			display: flex;
 			align-items: center;
-			justify-content: center;
+			justify-content: flex-end;
 			color: $white;
 			font-size: $h8-font-size;
 			@include PC {

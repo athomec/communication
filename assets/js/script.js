@@ -3,6 +3,7 @@ $(function () {//JS開頭
     var WINDOW = $(window).width();//視窗寬度
     var WINDOWH = $(window).height();//視窗高度
 
+    //捲動畫面改變 header 樣式
     $(window).scroll(function () {
         if ($(this).scrollTop() > 50) { //若目前的位置距離網頁頂端>...
             $(".gotop").addClass("show");
@@ -13,22 +14,22 @@ $(function () {//JS開頭
         }
     });
 
-    //字級大小
+    //點擊切換active樣式
     $(".js-toggle-btn").click(function () {
         $(this).toggleClass("active");
     });
 
-    //相簿設定
+    //首頁>生活花絮>相簿-開啟輪播視窗
     $(".js-photo-list a").click(function () {
         $(".js-photo-slide").addClass("show");
         return false;
     })
-    $(".js-close-photo-slide").click(function () {
+    $(".js-close-photo-slide").click(function () {//關閉輪播視窗
         $(".js-photo-slide").removeClass("show");
         return false;
     })
 
-    //菜單斷行判斷
+    //首頁>每日菜單-判斷是否斷行，若為是增加展開功能
     function checkLineBreaks() {
         var paragraphContainers = document.querySelectorAll('.js-theme-list-item-body');
         paragraphContainers.forEach(function (container) {
@@ -51,12 +52,11 @@ $(function () {//JS開頭
     });
 
 
-    // 選擇所有具有相應類名的元素
+    // 主選單下拉選單，桌機版設定為hover時出現
     var dropdownToggles = document.querySelectorAll('.js-dropdown-toggle');
     var dropdown = document.querySelectorAll('.js-dropdown');
     var isWideScreen = window.innerWidth > 992; // 檢查當前視窗寬度
 
-    // 初始化
     RESIZE();
 
     // 檢查視窗大小的函數
@@ -101,7 +101,6 @@ $(function () {//JS開頭
         }
     }
 
-    // 監聽視窗大小改變事件
     window.addEventListener('resize', function () {
         RESIZE();
     });

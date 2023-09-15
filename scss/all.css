@@ -20296,9 +20296,6 @@ input[readonly] {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   border-right: 1px solid #fff;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
@@ -20336,9 +20333,9 @@ input[readonly] {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   color: #fff;
   font-size: 0.8rem;
 }
@@ -21845,7 +21842,7 @@ input[readonly] {
   width: 0;
   display: inline-block;
   position: absolute;
-  right: -26px;
+  right: -25.6px;
   top: 0;
   height: 0;
   border-style: solid;
@@ -21909,7 +21906,7 @@ input[readonly] {
   width: 0;
   display: inline-block;
   position: absolute;
-  right: -26px;
+  right: -25.6px;
   top: 0;
   height: 0;
   border-style: solid;
@@ -21973,7 +21970,7 @@ input[readonly] {
   width: 0;
   display: inline-block;
   position: absolute;
-  right: -26px;
+  right: -25.6px;
   top: 0;
   height: 0;
   border-style: solid;
@@ -22037,7 +22034,7 @@ input[readonly] {
   width: 0;
   display: inline-block;
   position: absolute;
-  right: -26px;
+  right: -25.6px;
   top: 0;
   height: 0;
   border-style: solid;
@@ -22101,7 +22098,7 @@ input[readonly] {
   width: 0;
   display: inline-block;
   position: absolute;
-  right: -26px;
+  right: -25.6px;
   top: 0;
   height: 0;
   border-style: solid;
@@ -22165,7 +22162,7 @@ input[readonly] {
   width: 0;
   display: inline-block;
   position: absolute;
-  right: -26px;
+  right: -25.6px;
   top: 0;
   height: 0;
   border-style: solid;
@@ -22229,7 +22226,7 @@ input[readonly] {
   width: 0;
   display: inline-block;
   position: absolute;
-  right: -26px;
+  right: -25.6px;
   top: 0;
   height: 0;
   border-style: solid;
@@ -22293,7 +22290,7 @@ input[readonly] {
   width: 0;
   display: inline-block;
   position: absolute;
-  right: -26px;
+  right: -25.6px;
   top: 0;
   height: 0;
   border-style: solid;
@@ -22357,7 +22354,7 @@ input[readonly] {
   width: 0;
   display: inline-block;
   position: absolute;
-  right: -26px;
+  right: -25.6px;
   top: 0;
   height: 0;
   border-style: solid;
@@ -22421,7 +22418,7 @@ input[readonly] {
   width: 0;
   display: inline-block;
   position: absolute;
-  right: -26px;
+  right: -25.6px;
   top: 0;
   height: 0;
   border-style: solid;
@@ -22485,7 +22482,7 @@ input[readonly] {
   width: 0;
   display: inline-block;
   position: absolute;
-  right: -26px;
+  right: -25.6px;
   top: 0;
   height: 0;
   border-style: solid;
@@ -22549,7 +22546,7 @@ input[readonly] {
   width: 0;
   display: inline-block;
   position: absolute;
-  right: -26px;
+  right: -25.6px;
   top: 0;
   height: 0;
   border-style: solid;
@@ -22613,7 +22610,7 @@ input[readonly] {
   width: 0;
   display: inline-block;
   position: absolute;
-  right: -26px;
+  right: -25.6px;
   top: 0;
   height: 0;
   border-style: solid;
@@ -22677,7 +22674,7 @@ input[readonly] {
   width: 0;
   display: inline-block;
   position: absolute;
-  right: -26px;
+  right: -25.6px;
   top: 0;
   height: 0;
   border-style: solid;
@@ -22741,7 +22738,7 @@ input[readonly] {
   width: 0;
   display: inline-block;
   position: absolute;
-  right: -26px;
+  right: -25.6px;
   top: 0;
   height: 0;
   border-style: solid;
@@ -22805,7 +22802,7 @@ input[readonly] {
   width: 0;
   display: inline-block;
   position: absolute;
-  right: -26px;
+  right: -25.6px;
   top: 0;
   height: 0;
   border-style: solid;
@@ -22869,7 +22866,7 @@ input[readonly] {
   width: 0;
   display: inline-block;
   position: absolute;
-  right: -26px;
+  right: -25.6px;
   top: 0;
   height: 0;
   border-style: solid;
@@ -22933,7 +22930,7 @@ input[readonly] {
   width: 0;
   display: inline-block;
   position: absolute;
-  right: -26px;
+  right: -25.6px;
   top: 0;
   height: 0;
   border-style: solid;
@@ -22997,7 +22994,7 @@ input[readonly] {
   width: 0;
   display: inline-block;
   position: absolute;
-  right: -26px;
+  right: -25.6px;
   top: 0;
   height: 0;
   border-style: solid;
@@ -23061,7 +23058,7 @@ input[readonly] {
   width: 0;
   display: inline-block;
   position: absolute;
-  right: -26px;
+  right: -25.6px;
   top: 0;
   height: 0;
   border-style: solid;
@@ -23125,7 +23122,7 @@ input[readonly] {
   width: 0;
   display: inline-block;
   position: absolute;
-  right: -26px;
+  right: -25.6px;
   top: 0;
   height: 0;
   border-style: solid;
@@ -23189,7 +23186,7 @@ input[readonly] {
   width: 0;
   display: inline-block;
   position: absolute;
-  right: -26px;
+  right: -25.6px;
   top: 0;
   height: 0;
   border-style: solid;
@@ -23253,7 +23250,7 @@ input[readonly] {
   width: 0;
   display: inline-block;
   position: absolute;
-  right: -26px;
+  right: -25.6px;
   top: 0;
   height: 0;
   border-style: solid;
@@ -23317,7 +23314,7 @@ input[readonly] {
   width: 0;
   display: inline-block;
   position: absolute;
-  right: -26px;
+  right: -25.6px;
   top: 0;
   height: 0;
   border-style: solid;
@@ -23381,7 +23378,7 @@ input[readonly] {
   width: 0;
   display: inline-block;
   position: absolute;
-  right: -26px;
+  right: -25.6px;
   top: 0;
   height: 0;
   border-style: solid;
@@ -23445,7 +23442,7 @@ input[readonly] {
   width: 0;
   display: inline-block;
   position: absolute;
-  right: -26px;
+  right: -25.6px;
   top: 0;
   height: 0;
   border-style: solid;
@@ -23509,7 +23506,7 @@ input[readonly] {
   width: 0;
   display: inline-block;
   position: absolute;
-  right: -26px;
+  right: -25.6px;
   top: 0;
   height: 0;
   border-style: solid;
@@ -23573,7 +23570,7 @@ input[readonly] {
   width: 0;
   display: inline-block;
   position: absolute;
-  right: -26px;
+  right: -25.6px;
   top: 0;
   height: 0;
   border-style: solid;
@@ -23637,7 +23634,7 @@ input[readonly] {
   width: 0;
   display: inline-block;
   position: absolute;
-  right: -26px;
+  right: -25.6px;
   top: 0;
   height: 0;
   border-style: solid;
@@ -23701,7 +23698,7 @@ input[readonly] {
   width: 0;
   display: inline-block;
   position: absolute;
-  right: -26px;
+  right: -25.6px;
   top: 0;
   height: 0;
   border-style: solid;
@@ -23765,7 +23762,7 @@ input[readonly] {
   width: 0;
   display: inline-block;
   position: absolute;
-  right: -26px;
+  right: -25.6px;
   top: 0;
   height: 0;
   border-style: solid;
@@ -23829,7 +23826,7 @@ input[readonly] {
   width: 0;
   display: inline-block;
   position: absolute;
-  right: -26px;
+  right: -25.6px;
   top: 0;
   height: 0;
   border-style: solid;
@@ -23893,7 +23890,7 @@ input[readonly] {
   width: 0;
   display: inline-block;
   position: absolute;
-  right: -26px;
+  right: -25.6px;
   top: 0;
   height: 0;
   border-style: solid;
@@ -23957,7 +23954,7 @@ input[readonly] {
   width: 0;
   display: inline-block;
   position: absolute;
-  right: -26px;
+  right: -25.6px;
   top: 0;
   height: 0;
   border-style: solid;
@@ -24021,7 +24018,7 @@ input[readonly] {
   width: 0;
   display: inline-block;
   position: absolute;
-  right: -26px;
+  right: -25.6px;
   top: 0;
   height: 0;
   border-style: solid;
