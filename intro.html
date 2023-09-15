@@ -481,11 +481,13 @@
                 clear: "bi bi-trash3"
             }
         };
+        //首頁>各類勤務公告
+        //首頁>計畫專區
         $('#time-start').datetimepicker(datetimepickerOptions);
         $('#time-end').datetimepicker(datetimepickerOptions);
     });
 
-    //相簿設定
+    //首頁>活花絮>相簿-輪播視窗設定
     document.addEventListener('DOMContentLoaded', function () {
         var main = new Splide('#main-carousel', {
             type: 'fade',
@@ -539,7 +541,7 @@
 
 
 
-    //影片設定
+    //全站影片設定
     var lightBoxVideo = document.getElementById("thevideo");
     function lightbox_open() {
         window.scrollTo(0, 0);
@@ -552,7 +554,7 @@
         lightBoxVideo.currentTime = 0; // 重置影片到開頭
         lightBoxVideo.pause();
     }
-    //大圖設定
+    //全站大圖設定
     function showbox_open() {
             window.scrollTo(0, 0);
             document.getElementById('showpic').style.display = 'flex';
