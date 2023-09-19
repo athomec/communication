@@ -15735,6 +15735,9 @@ body {
   -webkit-touch-callout: none;
   -moz-user-select: none; }
 
+pre {
+  font-family: "Noto Sans TC", "Microsoft JhengHei", "sans-serif"; }
+
 img {
   display: block;
   max-width: 100%;
@@ -19363,6 +19366,24 @@ input[readonly] {
     .tag-white {
       font-size: 0.8rem; } }
 
+/*-----------------手風琴樣式---------------------*/
+.accordion-body {
+  background: #4e6f84; }
+
+.accordion-item {
+  border: none !important; }
+
+.accordion-button {
+  background: #343a40 !important;
+  color: #23ECD0 !important;
+  border-radius: 0 !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  padding: 8px 24px;
+  font-weight: 700; }
+  .accordion-button:after {
+    background: url("../images/ic-open.svg") no-repeat center !important; }
+
 /*-----------------列表樣式---------------------*/
 .txt-list {
   font-size: 0.9rem; }
@@ -20990,7 +21011,7 @@ input[readonly] {
 
 @media (max-width: 576px) {
   .mobile-inline-100 > * {
-    width: 100%;
+    width: 100% !important;
     margin-bottom: 8px; } }
 
 .highlight-card {
@@ -21212,8 +21233,9 @@ input[readonly] {
 .base-link {
   border: 1px solid #23ECD0;
   border-radius: 8px;
-  background: #435F71;
-  color: #fff;
+  background: #fff;
+  color: #1E4D61;
+  font-weight: 600;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -21226,7 +21248,7 @@ input[readonly] {
     .base-link {
       padding: 8px 16px; } }
   .base-link:hover {
-    background: #1E4D61; }
+    background: #DAEDFB; }
   .base-link img {
     width: 20px; }
 
@@ -21610,6 +21632,144 @@ input[readonly] {
 .splide__arrow--prev {
   border-radius: 10px 0 0 10px !important;
   left: 0 !important; }
+
+@media (max-width: 991px) {
+  .table[data-con="rollcall"] thead {
+    display: none; } }
+
+.table[data-con="rollcall"] tr:nth-child(odd) td:first-child {
+  background: #375B70; }
+
+.table[data-con="rollcall"] tr:nth-child(odd) td:nth-child(4) {
+  background: #537186; }
+
+.table[data-con="rollcall"] tr:nth-child(even) td:first-child {
+  background: #43677D; }
+
+.table[data-con="rollcall"] tr:nth-child(even) td:nth-child(4) {
+  background: #5D7B90; }
+
+@media (max-width: 991px) {
+  .table[data-con="rollcall"] td:first-child {
+    background: #ABD0E9 !important;
+    font-weight: 700; } }
+
+.table-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  @media (max-width: 991px) {
+    .table-list {
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start; } }
+  .table-list-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 6px 8px; }
+    .table-list-item::before {
+      content: "";
+      display: block;
+      width: 16px;
+      height: 16px;
+      background: url("../images/ic-oncall.svg") no-repeat;
+      background-size: cover;
+      margin-right: 4px; }
+    .table-list-item[data-con]::before {
+      content: attr(data-con);
+      background: #FB522E;
+      border-radius: 3px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      line-height: 1;
+      font-size: 0.8rem; }
+
+@media (max-width: 991px) {
+  .accordion thead {
+    display: none; } }
+
+@media (max-width: 991px) {
+  .accordion tr:last-child {
+    margin-bottom: 0; } }
+
+.combo-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  background: #476477; }
+  .combo-list-group:first-child {
+    width: 20%; }
+    @media (max-width: 991px) {
+      .combo-list-group:first-child {
+        width: 100%; } }
+  .combo-list-group:last-child {
+    width: 80%; }
+    @media (max-width: 991px) {
+      .combo-list-group:last-child {
+        width: 100%; } }
+  .combo-list-item {
+    color: #fff;
+    text-align: center; }
+    .combo-list-item span {
+      display: block;
+      padding: 6px 0; }
+  .combo-list-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background: #343a40;
+    padding: 8px 0; }
+    .combo-list-title::before {
+      content: "";
+      display: block;
+      width: 16px;
+      height: 16px;
+      background: url("../images/ic-oncall.svg") no-repeat;
+      background-size: cover;
+      margin-right: 4px; }
+    .combo-list-title[data-con="none"]:before {
+      display: none !important; }
+    .combo-list-title[data-con]::before {
+      content: attr(data-con);
+      background: #FB522E;
+      border-radius: 3px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      line-height: 1;
+      font-size: 0.8rem; }
 
 .text-list-item {
   display: -webkit-box;

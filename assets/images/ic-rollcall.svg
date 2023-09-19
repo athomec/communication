@@ -1,0 +1,11 @@
+<svg id="ic-rollcall" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <g id="Group_1657" data-name="Group 1657">
+    <rect id="Rectangle_846" data-name="Rectangle 846" width="30" height="30" fill="none"/>
+  </g>
+  <g id="Group_1659" data-name="Group 1659" transform="translate(5 2.5)">
+    <g id="Group_1658" data-name="Group 1658">
+      <circle id="Ellipse_29" data-name="Ellipse 29" cx="2.5" cy="2.5" r="2.5" transform="translate(7.5)" fill="#fff"/>
+      <path id="Path_573" data-name="Path 573" d="M18.863,9.637a3.878,3.878,0,0,0-2.95-1.387H12.737A6.266,6.266,0,0,1,6.5,2H4a8.779,8.779,0,0,0,6.25,8.387V27h2.5V19.5h2.5V27h2.5V12.063L22.688,17l1.763-1.762Z" transform="translate(-4 -2)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

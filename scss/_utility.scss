@@ -232,6 +232,26 @@
         }
     }
 }
+/*-----------------手風琴樣式---------------------*/
+.accordion{
+    &-body{
+        background: lighten($color: $base, $amount: 6%);
+    }
+    &-item{
+        border: none !important;
+    }
+    &-button{
+        background: $gray-800 !important;
+        color: $primary !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        padding: 8px 24px;
+        font-weight: $font-weight-bold;
+        &:after{
+            background: url("../images/ic-open.svg") no-repeat center !important;
+        }
+    }
+}
 /*-----------------列表樣式---------------------*/
 .txt-list {
     font-size: $h7-font-size;

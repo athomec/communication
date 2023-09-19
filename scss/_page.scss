@@ -307,7 +307,7 @@
 .mobile-inline-100 {
     & > * {
         @include mobile-lg {
-            width: 100%;
+            width: 100% !important;
             margin-bottom: 8px;
         }
     }
@@ -502,8 +502,9 @@
 .base-link {
     border: 1px solid $primary;
     border-radius: 8px;
-    background: $base;
-    color: $white;
+    background: $white;
+    color: $primary-dark;
+    font-weight: $font-weight-semibold;
     display: flex;
     align-items: center;
     padding: 8px 16px 8px 24px;
@@ -512,7 +513,7 @@
         padding: 8px 16px;
     }
     &:hover {
-        background: $primary-dark;
+        background: $base-xlight;
     }
     img{
         width: 20px;
@@ -912,7 +913,144 @@
     border-radius: 10px 0 0 10px !important;
     left: 0 !important;
 }
-
+.table[data-con="rollcall"]{
+    thead{
+        @include PC-sm{
+            display: none;
+        }
+    }
+    tr:nth-child(odd){
+        td:first-child{
+            background: #375B70;
+            
+        }
+        td:nth-child(4){
+            background: #537186;
+        }
+    }
+    tr:nth-child(even){
+        td:first-child{
+            background: #43677D;
+        }
+         td:nth-child(4){
+            background: #5D7B90;
+        }
+    }
+    td:first-child{
+        @include PC-sm{
+            background: $base-light !important;
+            font-weight: $font-weight-bold;
+        }
+    }
+}
+.table-list{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    @include PC-sm{
+        justify-content: flex-start;
+    }
+    &-item{
+        display: flex;
+        align-items: center;
+        padding: 6px 8px;
+        &::before{
+            content: "";
+            display: block;
+            width: 16px;
+            height: 16px;
+            background: url("../images/ic-oncall.svg") no-repeat;
+            background-size: cover;
+            margin-right: 4px;
+        }
+        &[data-con]{
+            &::before{
+                content: attr(data-con);
+                background: $danger-light;
+                border-radius: 3px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                line-height: 1;
+                font-size: $h8-font-size;
+            }
+        }
+    }
+}
+.accordion{
+    thead{
+        @include PC-sm{
+            display: none;
+        }
+    }
+    tr:last-child{
+        @include PC-sm{
+            margin-bottom: 0;
+        }
+    }
+}
+.combo-list{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    background: lighten($color: $base, $amount: 2%);
+    &-group{
+        &:first-child{
+            width: 20%;
+            @include PC-sm{
+                width: 100%;
+            }
+        }
+        &:last-child{
+            width: 80%;
+            @include PC-sm{
+                width: 100%;
+            }
+        }
+    }
+    &-item{
+        color: $white;
+        text-align: center;
+        span{
+            display: block;
+            padding: 6px 0;
+        }
+    }
+    &-title{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $gray-800;
+        padding: 8px 0;
+        &::before{
+            content: "";
+            display: block;
+            width: 16px;
+            height: 16px;
+            background: url("../images/ic-oncall.svg") no-repeat;
+            background-size: cover;
+            margin-right: 4px;
+        }
+        &[data-con="none"]{
+            &:before{
+                display: none !important;
+            }
+        }
+        &[data-con]{
+            &::before{
+                content: attr(data-con);
+                background: $danger-light;
+                border-radius: 3px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                line-height: 1;
+                font-size: $h8-font-size;
+            }
+        }
+    }
+}
 //其他
 .text-list {
     &-item {

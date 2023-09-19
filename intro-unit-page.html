@@ -110,7 +110,7 @@
                             </ul>
                         </li>
                         <li class="nav-item" data-con="login-item">
-                            <a class="nav-link" href="#" title="點名系統">點名系統</a>
+                            <a class="nav-link" href="rollcall.html" title="點名系統">點名系統</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="link.html" title="網網相連">網網相連</a>
@@ -152,14 +152,14 @@
             <div class="row gx-5">
                 <div class="col-12">
                     <div class="d-flex flex-wrap align-items-md-end mb-2 mb-sm-3">
-                        <h3 class="sub-title fw-semibold me-3 text-white mb-2 mb-sm">科長  陸大通少校</h3>
+                        <h3 class="sub-title fw-semibold me-3 text-white mb-2 mb-sm-0">科長  陸大通少校</h3>
                         <span class="text-base-light fs-7 mb-2 mb-sm-0">於99年1月1日上任</span>
                     </div>
                 </div>
                 <div class="col-lg-6 col-xl-5 mb-5 mb-lg-0">
                     <div class="box-img mb-3 h-100"><img src="./assets/images/demo-p1.jpg" alt="照片"></div>
                 </div>
-                <div class="col-lg-6 col-xl-7 d-flex flex-column">
+                <div class="col-lg-6 col-xl-7 d-flex flex-column text-white">
                     <div class="d-flex flex-wrap rounded border border-primary bg-primary-dark text-white px-3 pt-2 mb-3 fs-7">
                         <div class="d-flex mb-2">
                             <img src="./assets/images/ic-phone.svg" class="me-1">
@@ -172,20 +172,11 @@
                     </div>
                     <div class="bg-base-pale rounded px-4 px-md-5 py-3 py-md-4 d-flex flex-column flex-xxl-row align-items-xl-start mb-3">
                         <h4 class="sub-title-base-light flex-shrink-0 me-xxl-5">學歷</h4>
-                        <ul class="txt-list text-white">
-                            <li>陸軍官校65年班</li>
-                            <li>三軍大學陸軍指揮參謀學院78年班</li>
-                        </ul>
+                        <pre class="mb-0 fs-7">陸軍官校65年班<br>三軍大學陸軍指揮參謀學院78年班</pre>
                     </div>
                     <div class="bg-base-pale rounded px-4 px-md-5 py-3 py-md-4 d-flex flex-column flex-xxl-row align-items-xl-start h-100">
                         <h4 class="sub-title-base-light flex-shrink-0 me-xxl-5">經歷</h4>
-                        <ul class="txt-list text-white me-5">
-                            <li>陸軍裝步第373旅旅長</li>
-                            <li>陸軍總司令部作戰署署長</li>
-                            <li>陸軍第六軍團副司令</li>
-                            <li>國防部參謀本部作戰次長</li>
-                            <li>陸軍第六軍團指揮官</li>
-                        </ul>
+                        <pre class="mb-0 fs-7">陸軍裝步第373旅旅長<br>陸軍總司令部作戰署署長<br>陸軍第六軍團副司令<br>國防部參謀本部作戰次長<br>陸軍第六軍團指揮官</pre>
                     </div>
                 </div>
             </div>
@@ -270,6 +261,8 @@
         //首頁>計畫專區
         $('#time-start').datetimepicker(datetimepickerOptions);
         $('#time-end').datetimepicker(datetimepickerOptions);
+        //首頁>點名系統
+        $('#calldate').datetimepicker(datetimepickerOptions);
     });
 
     //首頁>活花絮>相簿-輪播視窗設定
