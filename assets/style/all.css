@@ -21686,7 +21686,8 @@ input[readonly] {
     padding: 6px 8px; }
     @media (max-width: 991px) {
       .table-list-item {
-        padding-left: 0; } }
+        padding-left: 0;
+        padding-right: 24px; } }
     .table-list-item::before {
       content: "";
       display: block;

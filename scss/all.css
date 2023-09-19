@@ -28085,6 +28085,7 @@ input[readonly] {
 @media (max-width: 991px) {
   .table-list-item {
     padding-left: 0;
+    padding-right: 24px;
   }
 }
 

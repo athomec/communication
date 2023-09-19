@@ -962,6 +962,7 @@
         padding: 6px 8px;
         @include PC-sm{
             padding-left: 0;
+            padding-right: 24px;
         }
         &::before{
             content: "";
