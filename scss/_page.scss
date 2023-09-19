@@ -942,6 +942,11 @@
             font-weight: $font-weight-bold;
         }
     }
+    td:nth-child(4){
+        @include PC-sm{
+            flex-direction: column !important;
+        }
+    }
 }
 .table-list{
     display: flex;
@@ -955,6 +960,9 @@
         display: flex;
         align-items: center;
         padding: 6px 8px;
+        @include PC-sm{
+            padding-left: 0;
+        }
         &::before{
             content: "";
             display: block;

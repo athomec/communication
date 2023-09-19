@@ -28043,6 +28043,15 @@ input[readonly] {
   }
 }
 
+@media (max-width: 991px) {
+  .table[data-con="rollcall"] td:nth-child(4) {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+}
+
 .table-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -28071,6 +28080,12 @@ input[readonly] {
       -ms-flex-align: center;
           align-items: center;
   padding: 6px 8px;
+}
+
+@media (max-width: 991px) {
+  .table-list-item {
+    padding-left: 0;
+  }
 }
 
 .table-list-item::before {
