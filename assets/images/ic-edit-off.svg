@@ -1,0 +1,10 @@
+<svg id="ic-edit-off" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <g id="Group_1755" data-name="Group 1755">
+    <path id="Path_630" data-name="Path 630" d="M0,0H40V40H0Z" fill="none"/>
+  </g>
+  <g id="Group_1757" data-name="Group 1757" transform="translate(2.317 4.683)">
+    <g id="Group_1756" data-name="Group 1756">
+      <path id="Path_631" data-name="Path 631" d="M22.507,13.16l1.533,1.533-1.85,1.85,2.35,2.35,4.2-4.2-6.25-6.25-4.2,4.2,2.35,2.35ZM33.59,9.86a1.66,1.66,0,0,0,0-2.35l-3.9-3.9a1.67,1.67,0,0,0-2.35,0L24.29,6.66l6.25,6.25ZM3.757,2.81,1.39,5.16l12.2,12.2L4.073,26.877v6.25h6.25L19.84,23.61l12.2,12.2,2.35-2.35ZM8.94,29.793H7.407V28.26l8.55-8.55,1.533,1.533Z" transform="translate(-1.39 -2.81)" fill="#abd0e9"/>
+    </g>
+  </g>
+</svg>
