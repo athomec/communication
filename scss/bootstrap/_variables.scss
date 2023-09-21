@@ -321,6 +321,7 @@ $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
+$danger-bright:        #FE0000 !default;
 $danger-light:        #FB522E !default;
 $danger-xlight:        #FFA5A5 !default;
 $light:         $gray-100 !default;
@@ -359,6 +360,7 @@ $theme-colors: (
   "info":       $info,
   "warning":    $warning,
   "danger":     $danger,
+  "danger-bright":     $danger-bright,
   "danger-light":     $danger-light,
   "danger-xlight":     $danger-xlight,
   "light":      $light,

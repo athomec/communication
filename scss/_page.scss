@@ -1006,13 +1006,13 @@
     background: lighten($color: $base, $amount: 2%);
     &-group{
         &:first-child{
-            width: 20%;
+            width: 25%;
             @include PC-sm{
                 width: 100%;
             }
         }
         &:last-child{
-            width: 80%;
+            width: 75%;
             @include PC-sm{
                 width: 100%;
             }
