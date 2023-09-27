@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="ic-weather-rain" transform="translate(-197 -145)">
+    <rect id="Rectangle_260" data-name="Rectangle 260" width="24" height="24" transform="translate(197 145)" fill="none"/>
+    <g id="天気記号13" transform="translate(198.427 148.135)">
+      <path id="Path_331" data-name="Path 331" d="M16.41,36.767h0c0-.063,0-.125,0-.189A5.47,5.47,0,0,0,5.5,36.013a4.244,4.244,0,1,0-1.255,8.3H16.41a3.772,3.772,0,1,0,0-7.544Z" transform="translate(0 -31.109)" fill="#abd0e9"/>
+      <path id="Path_332" data-name="Path 332" d="M96.9,401.673a1.082,1.082,0,0,0,2.164,0,6.842,6.842,0,0,0-1.082-2.124A6.842,6.842,0,0,0,96.9,401.673Z" transform="translate(-93.085 -385.026)" fill="#abd0e9"/>
+      <path id="Path_333" data-name="Path 333" d="M230.456,401.673a1.082,1.082,0,0,0,2.164,0,6.842,6.842,0,0,0-1.082-2.124A6.842,6.842,0,0,0,230.456,401.673Z" transform="translate(-221.372 -385.026)" fill="#abd0e9"/>
+      <path id="Path_334" data-name="Path 334" d="M364.024,401.673a1.082,1.082,0,0,0,2.164,0,6.842,6.842,0,0,0-1.082-2.124A6.842,6.842,0,0,0,364.024,401.673Z" transform="translate(-349.675 -385.026)" fill="#abd0e9"/>
+    </g>
+  </g>
+</svg>

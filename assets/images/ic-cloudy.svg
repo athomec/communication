@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="ic-cloudy" transform="translate(-274 -145)">
+    <rect id="Rectangle_261" data-name="Rectangle 261" width="24" height="24" transform="translate(274 145)" fill="none"/>
+    <g id="天気記号10" transform="translate(283.676 151.479)">
+      <path id="Path_335" data-name="Path 335" d="M10,91.973h0c0-.038,0-.077,0-.115a3.334,3.334,0,0,0-6.65-.345,2.587,2.587,0,1,0-.765,5.058H10a2.3,2.3,0,1,0,0-4.6Z" transform="translate(0 -88.524)" fill="#dbdbdb"/>
+    </g>
+    <g id="天気記号10-2" data-name="天気記号10" transform="translate(275.926 152.03)">
+      <path id="Path_335-2" data-name="Path 335" d="M13.04,93.021h0c0-.05,0-.1,0-.15a4.347,4.347,0,0,0-8.67-.45,3.373,3.373,0,1,0-1,6.595H13.04a3,3,0,1,0,0-6Z" transform="translate(0 -88.524)" fill="#999"/>
+    </g>
+  </g>
+</svg>
