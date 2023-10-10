@@ -165,15 +165,12 @@
                     <img src="./assets/images/demo-p4.jpg" alt="照片">
                 </li>
                 <li class="splide__slide">
-                    <img src="./assets/images/demo-p3.jpg" alt="照片">
-                </li>
-                <li class="splide__slide">
                     <video controls class="js-splide-video">
                         <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" id="source">
                     </video>
                 </li>
                 <li class="splide__slide">
-                    <img src="./assets/images/demo-p5.jpg" alt="照片">
+                    <img src="./assets/images/demo-p7.jpg" alt="照片">
                 </li>
                 <li class="splide__slide">
                     <video controls class="js-splide-video">
@@ -187,7 +184,7 @@
                     <img src="./assets/images/demo-p4.jpg" alt="照片">
                 </li>
                 <li class="splide__slide">
-                    <img src="./assets/images/demo-p5.jpg" alt="照片">
+                    <img src="./assets/images/demo-p3.jpg" alt="照片">
                 </li>
                 <li class="splide__slide">
                     <img src="./assets/images/demo-p4.jpg" alt="照片">
@@ -205,27 +202,24 @@
                     <img src="./assets/images/demo-p4.jpg" alt="照片">
                 </li>
                 <li class="splide__slide">
+                    <div class="thumbnail-video"></div>
+                    <img src="./assets/images/demo-p4.jpg" alt="照片">
+                </li>
+                <li class="splide__slide">
+                    <img src="./assets/images/demo-p7.jpg" alt="照片">
+                </li>
+                <li class="splide__slide">
+                    <div class="thumbnail-video"></div>
+                    <img src="./assets/images/demo-p4.jpg" alt="照片">
+                </li>
+                <li class="splide__slide">
+                    <img src="./assets/images/demo-p5.jpg" alt="照片">
+                </li>
+                <li class="splide__slide">
+                    <img src="./assets/images/demo-p4.jpg" alt="照片">
+                </li>
+                <li class="splide__slide">
                     <img src="./assets/images/demo-p3.jpg" alt="照片">
-                </li>
-                <li class="splide__slide">
-                    <div class="thumbnail-video"></div>
-                    <img src="./assets/images/demo-p4.jpg" alt="照片">
-                </li>
-                <li class="splide__slide">
-                    <img src="./assets/images/demo-p5.jpg" alt="照片">
-                </li>
-                <li class="splide__slide">
-                    <div class="thumbnail-video"></div>
-                    <img src="./assets/images/demo-p4.jpg" alt="照片">
-                </li>
-                <li class="splide__slide">
-                    <img src="./assets/images/demo-p5.jpg" alt="照片">
-                </li>
-                <li class="splide__slide">
-                    <img src="./assets/images/demo-p4.jpg" alt="照片">
-                </li>
-                <li class="splide__slide">
-                    <img src="./assets/images/demo-p5.jpg" alt="照片">
                 </li>
                 <li class="splide__slide">
                     <img src="./assets/images/demo-p4.jpg" alt="照片">
@@ -509,6 +503,7 @@
         main.sync(thumbnails);
         main.mount();
         thumbnails.mount();
+        var videos = document.querySelectorAll('.js-splide-video');
 
         // 在主要滑塊切換時停止和播放影片
         main.on('move', function (newIndex) {
@@ -517,13 +512,8 @@
             // 暫停所有影片
             videos.forEach(function (video) {
                 video.pause();
+                video.currentTime = 0; 
             });
-
-            // 播放新選中的影片
-            var currentVideo = videos[newIndex];
-            if (currentVideo) {
-                currentVideo.play();
-            }
         });
     });
 
@@ -539,8 +529,8 @@
 
     function lightbox_close() {
         document.getElementById('light').style.display = 'none';
-        lightBoxVideo.currentTime = 0; // 重置影片到開頭
         lightBoxVideo.pause();
+        lightBoxVideo.currentTime = 0; // 重置影片到開頭
     }
     //全站大圖設定
     function showbox_open() {
