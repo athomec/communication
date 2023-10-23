@@ -6,6 +6,9 @@
         background: url("../images/bbg.jpg") no-repeat center top;
         background-size: 1300px 100%;
     }
+    &.unlog{
+        min-height: calc(100vh - 218px);
+    }
 }
 .info-box{
     display: flex;
