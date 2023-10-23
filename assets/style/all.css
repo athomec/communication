@@ -21696,7 +21696,8 @@ input[readonly] {
     width: 100%; }
 
 .unit-link {
-  position: relative; }
+  position: relative;
+  display: block; }
   .unit-link-title {
     display: block;
     -webkit-transition: all 0.2s ease;
