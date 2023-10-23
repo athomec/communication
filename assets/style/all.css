@@ -16614,6 +16614,13 @@ input[readonly] {
       font-size: 0.9rem; } }
   .footer.unlog {
     padding: 0; }
+    .footer.unlog .footer-function {
+      display: none; }
+      @media (max-width: 767px) {
+        .footer.unlog .footer-function {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex; } }
   .footer-function {
     position: fixed;
     display: -webkit-box;
