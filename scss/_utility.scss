@@ -305,14 +305,54 @@
 .img-list {
     display: flex;
     flex-wrap: wrap;
+    overflow: hidden;
+    position: relative;
+    &::after{
+        position: absolute;
+        display: block;
+        content:"";
+        width: 100%;
+        height: 5px;
+        background: $base-pale;
+        left: 0;
+        bottom: 24px;
+        @include PC{
+            bottom: 32px;
+        }
+        @include PC-sm{
+            bottom: 30px;
+        }
+        @include Pad{
+            bottom: 24px;
+        }
+    }
+    &-title{
+        font-size: $h6-font-size;
+        font-weight: $font-weight-semibold;
+    }
     &-item {
         width: 17.6%;
         display: flex;
+        position: relative;
         flex-direction: column;
         align-items: center;
         margin-right: 3%;
-        margin-bottom: 40px;
-        font-weight: $font-weight-bold;
+        padding-bottom: 24px;
+        margin-bottom: 24px;
+        font-weight: $font-weight-medium;
+        &:last-child{
+            overflow: hidden;
+        }
+        &:after{
+            content: " ";
+            display: block;
+            position: absolute;
+            width: 300px;
+            height: 1px;
+            left: -3%;
+            bottom: 0;
+            background: $base-light;
+        }
         &:nth-child(5n){
             margin-right: 0;
         }
