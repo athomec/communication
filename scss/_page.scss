@@ -619,6 +619,7 @@
 .unit-link {
     position: relative;
     &-title {
+        display: block;
         transition: all 0.2s ease;
         overflow: hidden;
         position: absolute;
@@ -795,8 +796,12 @@
             width: 150px;
             height: 130px;
         }
+        @include mobile-md{
+            width: 100px;
+            height: 100px;
+        }
         img{
-            max-width: 150% !important;
+            max-width: 200% !important;
             height: 100%; 
         }
     }

@@ -21698,6 +21698,7 @@ input[readonly] {
 .unit-link {
   position: relative; }
   .unit-link-title {
+    display: block;
     -webkit-transition: all 0.2s ease;
     -o-transition: all 0.2s ease;
     transition: all 0.2s ease;
@@ -21860,8 +21861,12 @@ input[readonly] {
     .info-card-img {
       width: 150px;
       height: 130px; } }
+  @media (max-width: 523px) {
+    .info-card-img {
+      width: 100px;
+      height: 100px; } }
   .info-card-img img {
-    max-width: 150% !important;
+    max-width: 200% !important;
     height: 100%; }
 
 .top-info {
