@@ -16593,7 +16593,13 @@ input[readonly] {
       height: auto; } }
   .box-img img {
     max-width: 200% !important;
-    height: 100%; }
+    height: 100%;
+    cursor: pointer;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease; }
+    .box-img img:hover {
+      opacity: 0.8; }
     @media (max-width: 991px) {
       .box-img img {
         width: 100%; } }

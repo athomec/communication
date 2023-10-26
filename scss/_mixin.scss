@@ -1,0 +1,73 @@
+/*--溢出文字點點點--*/
+@mixin over_text($line) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line;
+}
+
+/*--隱藏區塊內文字--*/
+@mixin text-indent {
+    text-indent: -9999px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* --RWD斷點設定-- */
+@mixin PC-lg {
+    @media (max-width: 1550px) {
+        @content;
+    }
+}
+@mixin PC-md {
+    @media (max-width: 1400px) {
+        @content;
+    }
+}
+@mixin PC {
+    @media (max-width: 1200px) {
+        @content;
+    }
+}
+@mixin PC-sm {
+    @media (max-width: 991px) {
+        @content;
+    }
+}
+@mixin Pad {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+@mixin mobile-lg {
+    @media (max-width: 576px) {
+        @content;
+    }
+}
+@mixin mobile-md {
+    @media (max-width: 523px) {
+        @content;
+    }
+}
+@mixin mobile {
+    @media (max-width: 485px) {
+        @content;
+    }
+}
+@mixin mobile-sm {
+    @media (max-width: 375px) {
+        @content;
+    }
+}
+/* --漸層填色設定-- */
+@mixin gradient-horizon($colorstart, $colorend) {
+    background: $colorstart;
+    /* Old browsers */
+    background: -moz-linear-gradient(left, $colorstart 0%, $colorend 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, $colorstart 0%, $colorend 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, $colorstart 0%, $colorend 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
