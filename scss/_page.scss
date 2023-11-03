@@ -405,6 +405,9 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        &:last-child{
+            border: none;
+        }
         @include PC-md{
             align-items: flex-start;
         }
@@ -413,7 +416,7 @@
             border-right: none !important;
             padding-bottom: 16px;
         }
-        &:nth-child(3n){
+        &:nth-child(5n){
             border-right: none;
             @include PC-md{
                border-right: 1px solid $base-light; 
@@ -425,13 +428,15 @@
                 border-right: 1px solid $base-light; 
             }
         }
-        &:nth-child(2n){
+        &:nth-child(3n){
             @include PC-md{
                border-right: none; 
             }
-            @include PC-sm{
+            @include Pad{
                 border-right: 1px solid $base-light; 
             }
+        }
+         &:nth-child(2n){
             @include Pad{
                 border-right: none;
             }

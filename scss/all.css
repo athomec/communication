@@ -21842,9 +21842,21 @@ input[readonly] {
   margin-bottom: 16px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 767px) {
+  .sign-list-item {
+    width: 25%;
+  }
+}
+
+@media (max-width: 576px) {
   .sign-list-item {
     width: 33.33%;
+  }
+}
+
+@media (max-width: 523px) {
+  .sign-list-item {
+    width: 50%;
   }
 }
 
@@ -27772,6 +27784,10 @@ input[readonly] {
           align-items: center;
 }
 
+.member-list-item:last-child {
+  border: none;
+}
+
 @media (max-width: 1400px) {
   .member-list-item {
     -webkit-box-align: start;
@@ -27788,17 +27804,29 @@ input[readonly] {
   }
 }
 
-.member-list-item:nth-child(3n) {
+.member-list-item:nth-child(5n) {
   border-right: none;
 }
 
 @media (max-width: 1400px) {
-  .member-list-item:nth-child(3n) {
+  .member-list-item:nth-child(5n) {
     border-right: 1px solid #ABD0E9;
   }
 }
 
 @media (max-width: 991px) {
+  .member-list-item:nth-child(5n) {
+    border-right: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .member-list-item:nth-child(5n) {
+    border-right: 1px solid #ABD0E9;
+  }
+}
+
+@media (max-width: 1400px) {
   .member-list-item:nth-child(3n) {
     border-right: none;
   }
@@ -27806,18 +27834,6 @@ input[readonly] {
 
 @media (max-width: 767px) {
   .member-list-item:nth-child(3n) {
-    border-right: 1px solid #ABD0E9;
-  }
-}
-
-@media (max-width: 1400px) {
-  .member-list-item:nth-child(2n) {
-    border-right: none;
-  }
-}
-
-@media (max-width: 991px) {
-  .member-list-item:nth-child(2n) {
     border-right: 1px solid #ABD0E9;
   }
 }

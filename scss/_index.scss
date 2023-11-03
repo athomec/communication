@@ -256,8 +256,14 @@
         align-items: center;
         color: $white;
         margin-bottom: 16px;
-        @include PC{
+        @include Pad{
+            width: 25%;
+        }
+        @include mobile-lg{
             width: 33.33%;
+        }
+        @include mobile-md{
+            width: 50%;
         }
         &[data-status="none"]{
             .sign-list-status{
