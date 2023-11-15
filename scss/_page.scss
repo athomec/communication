@@ -1,5 +1,5 @@
 .main {
-    min-height: 603px;
+    min-height: calc(100vh - 218px);
     @include Pad {
         min-height: auto;
     }

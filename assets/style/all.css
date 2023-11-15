@@ -21048,7 +21048,7 @@ input[readonly] {
     font-size: 0.9rem; }
 
 .main {
-  min-height: 603px; }
+  min-height: calc(100vh - 218px); }
   @media (max-width: 767px) {
     .main {
       min-height: auto; } }
