@@ -21739,7 +21739,9 @@ input[readonly] {
     .unit-link {
       height: 160px; } }
   .unit-link img {
-    height: 100%; }
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover; }
   .unit-link-title {
     display: block;
     -webkit-transition: all 0.2s ease;
@@ -21861,7 +21863,8 @@ input[readonly] {
         height: 220px; } }
     .multicard-img img {
       height: 100%;
-      max-width: 200%; }
+      -o-object-fit: cover;
+         object-fit: cover; }
     .multicard-img div {
       position: absolute;
       left: 0;
