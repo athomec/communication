@@ -623,7 +623,18 @@
 }
 .unit-link {
     position: relative;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $black;
+    height: 246px;
+    overflow: hidden;
+    @include PC{
+        height: 160px;
+    }
+    img{
+        height: 100%;
+    }
     &-title {
         display: block;
         transition: all 0.2s ease;
@@ -748,6 +759,18 @@
         position: relative;
         border-radius: 5px 5px 0 0;
         margin-bottom: 24px;
+        height: 162px;
+        background: $black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include PC{
+            height: 220px;
+        }
+        img{
+            height: 100%;
+            max-width: 200%;
+        }
         div {
             position: absolute;
             left: 0;

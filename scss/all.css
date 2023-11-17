@@ -27165,7 +27165,7 @@ input[readonly] {
 }
 
 .main {
-  min-height: 603px;
+  min-height: calc(100vh - 218px);
 }
 
 @media (max-width: 767px) {
@@ -28116,7 +28116,28 @@ input[readonly] {
 
 .unit-link {
   position: relative;
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #000;
+  height: 246px;
+  overflow: hidden;
+}
+
+@media (max-width: 1200px) {
+  .unit-link {
+    height: 160px;
+  }
+}
+
+.unit-link img {
+  height: 100%;
 }
 
 .unit-link-title {
@@ -28252,6 +28273,28 @@ input[readonly] {
   position: relative;
   border-radius: 5px 5px 0 0;
   margin-bottom: 24px;
+  height: 162px;
+  background: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 1200px) {
+  .multicard-img {
+    height: 220px;
+  }
+}
+
+.multicard-img img {
+  height: 100%;
+  max-width: 200%;
 }
 
 .multicard-img div {
