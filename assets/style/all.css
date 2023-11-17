@@ -21673,7 +21673,8 @@ input[readonly] {
     #thevideo {
       width: 90%; } }
 
-#light, #showpic {
+#light,
+#showpic {
   width: 100%;
   height: 100vh;
   -webkit-box-pack: center;
@@ -21733,15 +21734,34 @@ input[readonly] {
       -ms-flex-align: center;
           align-items: center;
   background: #000;
-  height: 246px;
   overflow: hidden; }
-  @media (max-width: 1200px) {
-    .unit-link {
-      height: 160px; } }
-  .unit-link img {
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover; }
+  .unit-link::before {
+    content: "";
+    display: block;
+    width: 100%;
+    padding: 73% 0 0 0;
+    overflow: hidden; }
+  .unit-link-img {
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    z-index: 5; }
+    .unit-link-img img {
+      max-width: 100%;
+      max-height: 100%; }
   .unit-link-title {
     display: block;
     -webkit-transition: all 0.2s ease;
@@ -21754,6 +21774,7 @@ input[readonly] {
     left: 0;
     bottom: 0;
     color: #fff;
+    z-index: 100;
     border-bottom: 3px solid #23ECD0;
     padding: 11px 24px;
     margin-bottom: 0;
@@ -21847,25 +21868,37 @@ input[readonly] {
     position: relative;
     border-radius: 5px 5px 0 0;
     margin-bottom: 24px;
-    height: 162px;
     background: #000;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
-    @media (max-width: 1200px) {
-      .multicard-img {
-        height: 220px; } }
-    .multicard-img img {
-      height: 100%;
-      -o-object-fit: cover;
-         object-fit: cover; }
-    .multicard-img div {
+    display: block;
+    width: 100%; }
+    .multicard-img::before {
+      content: "";
+      display: block;
+      width: 100%;
+      padding: 79% 0 0 0;
+      overflow: hidden; }
+    .multicard-img-wrapper {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      max-width: 100%;
+      max-height: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #000; }
+      .multicard-img-wrapper img {
+        max-width: 100%;
+        max-height: 100%; }
+    .multicard-img-title {
       position: absolute;
       left: 0;
       bottom: 0;
@@ -22141,16 +22174,16 @@ input[readonly] {
     display: none; } }
 
 .table[data-con="rollcall"] tr:nth-child(odd) td:first-child {
-  background: #375B70; }
+  background: #375b70; }
 
 .table[data-con="rollcall"] tr:nth-child(odd) td:nth-child(4) {
   background: #537186; }
 
 .table[data-con="rollcall"] tr:nth-child(even) td:first-child {
-  background: #43677D; }
+  background: #43677d; }
 
 .table[data-con="rollcall"] tr:nth-child(even) td:nth-child(4) {
-  background: #5D7B90; }
+  background: #5d7b90; }
 
 @media (max-width: 991px) {
   .table[data-con="rollcall"] td:first-child {

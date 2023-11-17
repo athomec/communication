@@ -399,50 +399,50 @@
         }
     }
 }
-.member-list{
-    &-item{
+.member-list {
+    &-item {
         border-right: 1px solid $base-light;
         display: flex;
         flex-direction: column;
         align-items: center;
-        &:last-child{
+        &:last-child {
             border: none;
         }
-        @include PC-md{
+        @include PC-md {
             align-items: flex-start;
         }
-        @include mobile-lg{
+        @include mobile-lg {
             border-bottom: 1px solid $base-light;
             border-right: none !important;
             padding-bottom: 16px;
         }
-        &:nth-child(5n){
+        &:nth-child(5n) {
             border-right: none;
-            @include PC-md{
-               border-right: 1px solid $base-light; 
+            @include PC-md {
+                border-right: 1px solid $base-light;
             }
-            @include PC-sm{
+            @include PC-sm {
                 border-right: none;
             }
-            @include Pad{
-                border-right: 1px solid $base-light; 
+            @include Pad {
+                border-right: 1px solid $base-light;
             }
         }
-        &:nth-child(3n){
-            @include PC-md{
-               border-right: none; 
+        &:nth-child(3n) {
+            @include PC-md {
+                border-right: none;
             }
-            @include Pad{
-                border-right: 1px solid $base-light; 
+            @include Pad {
+                border-right: 1px solid $base-light;
             }
         }
-         &:nth-child(2n){
-            @include Pad{
+        &:nth-child(2n) {
+            @include Pad {
                 border-right: none;
             }
         }
     }
-    &-title{
+    &-title {
         font-size: $h7-font-size;
         letter-spacing: 0;
     }
@@ -563,10 +563,9 @@
     &:hover {
         background: $base-xlight;
     }
-    img{
+    img {
         width: 20px;
     }
-
 }
 /*-------影片開始-----------*/
 
@@ -576,7 +575,8 @@
         width: 90%;
     }
 }
-#light,#showpic {
+#light,
+#showpic {
     width: 100%;
     height: 100vh;
     justify-content: center;
@@ -617,7 +617,7 @@
     @include Pad {
         width: 90%;
     }
-    img{
+    img {
         width: 100%;
     }
 }
@@ -627,14 +627,30 @@
     justify-content: center;
     align-items: center;
     background: $black;
-    height: 246px;
     overflow: hidden;
-    @include PC{
-        height: 160px;
+    &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        padding: 73% 0 0 0;
+        overflow: hidden;
     }
-    img{
-        height: 100%;
-	object-fit: cover;
+    &-img{
+        max-width: 100%;
+        max-height: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 5;
+        img{
+            max-width: 100%;
+            max-height: 100%;
+        }
     }
     &-title {
         display: block;
@@ -646,6 +662,7 @@
         left: 0;
         bottom: 0;
         color: $white;
+        z-index: 100;
         border-bottom: 3px solid $primary;
         padding: 11px 24px;
         margin-bottom: 0;
@@ -760,19 +777,34 @@
         position: relative;
         border-radius: 5px 5px 0 0;
         margin-bottom: 24px;
-        height: 162px;
         background: $black;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        @include PC{
-            height: 220px;
+        display: block;
+        width: 100%;
+        &::before {
+            content: "";
+            display: block;
+            width: 100%;
+            padding: 79% 0 0 0;
+            overflow: hidden;
         }
-        img{
-            height: 100%;
-            object-fit: cover;
+        &-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 100%;
+            max-height: 100%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: $black;
+            img{
+                max-width: 100%;
+            max-height: 100%;
+            }
         }
-        div {
+        &-title {
             position: absolute;
             left: 0;
             bottom: 0;
@@ -796,24 +828,24 @@
         }
     }
 }
-.info-card{
-    &>div:last-child{
-        .info-card-list{
+.info-card {
+    & > div:last-child {
+        .info-card-list {
             border-bottom: none;
         }
     }
-    &-list{
+    &-list {
         display: flex;
-    align-items: center;
-    @include PC-sm{
-        border-bottom: 1px solid $base-dark;
-        padding-bottom: 24px;
+        align-items: center;
+        @include PC-sm {
+            border-bottom: 1px solid $base-dark;
+            padding-bottom: 24px;
+        }
     }
-    }
-    &-title{
+    &-title {
         font-size: $h5-font-size;
     }
-    &-img{
+    &-img {
         width: 160px;
         height: 140px;
         border-radius: 8px;
@@ -822,17 +854,17 @@
         align-items: center;
         overflow: hidden;
         flex-shrink: 0;
-        @include PC-sm{
+        @include PC-sm {
             width: 150px;
             height: 130px;
         }
-        @include mobile-md{
+        @include mobile-md {
             width: 100px;
             height: 100px;
         }
-        img{
+        img {
             max-width: 200% !important;
-            height: 100%; 
+            height: 100%;
         }
     }
 }
@@ -841,7 +873,7 @@
     color: $white;
     background: $base-pale;
     font-size: $h7-font-size;
-    @include mobile-lg{
+    @include mobile-lg {
         flex-direction: column;
     }
     img {
@@ -905,8 +937,8 @@
 .splide {
     width: 80%;
     max-width: 1200px;
-    @include Pad{
-            width: 90%;
+    @include Pad {
+        width: 90%;
     }
     &-header {
         width: 80%;
@@ -917,17 +949,17 @@
         align-items: center;
         margin-bottom: 12px;
         font-size: $h7-font-size;
-        @include Pad{
+        @include Pad {
             width: 90%;
         }
-        img{
+        img {
             width: 16px;
         }
     }
-    &-title{
+    &-title {
         font-size: $h4-font-size;
         font-weight: $font-weight-bold;
-        @include Pad{
+        @include Pad {
             width: 100%;
         }
     }
@@ -937,20 +969,20 @@
     height: calc(90vh - 200px);
     border-radius: 5px;
     overflow: hidden;
-    @include PC{
+    @include PC {
         max-height: 400px;
     }
-    @include Pad{
+    @include Pad {
         height: auto;
         max-height: 350px;
     }
-    .splide__track{
+    .splide__track {
         height: 100%;
     }
-    .splide__slide{
+    .splide__slide {
         height: 100%;
     }
-    video{
+    video {
         width: 100%;
         height: 100%;
     }
@@ -967,119 +999,118 @@
         object-fit: cover;
     }
 }
-#thumbnail-carousel{
+#thumbnail-carousel {
     padding: 0 60px !important;
-    @include PC{
+    @include PC {
         padding: 0 47px !important;
     }
-    @include Pad{
+    @include Pad {
         padding: 0 42px !important;
     }
     .splide__slide.is-active {
-    border: 3px solid $primary;;
-}
-.thumbnail-video{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background: url("../images/ic-play.svg") no-repeat center rgba($black, 0.3);
-    background-size: 32px;
-    &:hover{
-        background: url("../images/ic-play.svg") no-repeat center;
-        background-size: 32px;
+        border: 3px solid $primary;
     }
-}
+    .thumbnail-video {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: url("../images/ic-play.svg") no-repeat center rgba($black, 0.3);
+        background-size: 32px;
+        &:hover {
+            background: url("../images/ic-play.svg") no-repeat center;
+            background-size: 32px;
+        }
+    }
 }
 .splide__slide.is-active {
     opacity: 1;
 }
 
-.splide__arrow{
+.splide__arrow {
     background: $base !important;
     width: 45px !important;
     height: 100% !important;
     opacity: 1 !important;
-    @include PC{
+    @include PC {
         width: 35px !important;
     }
-    @include Pad{
+    @include Pad {
         width: 30px !important;
     }
-    &:hover{
+    &:hover {
         background: $primary-dark !important;
     }
-    svg{
+    svg {
         fill: $white !important;
-        @include PC{
+        @include PC {
             width: 14px;
         }
-        @include Pad{
+        @include Pad {
             width: 12px;
         }
     }
 }
-.splide__arrow--next{
+.splide__arrow--next {
     border-radius: 0 10px 10px 0 !important;
     right: 0 !important;
 }
-.splide__arrow--prev{
+.splide__arrow--prev {
     border-radius: 10px 0 0 10px !important;
     left: 0 !important;
 }
-.table[data-con="rollcall"]{
-    thead{
-        @include PC-sm{
+.table[data-con="rollcall"] {
+    thead {
+        @include PC-sm {
             display: none;
         }
     }
-    tr:nth-child(odd){
-        td:first-child{
-            background: #375B70;
-            
+    tr:nth-child(odd) {
+        td:first-child {
+            background: #375b70;
         }
-        td:nth-child(4){
+        td:nth-child(4) {
             background: #537186;
         }
     }
-    tr:nth-child(even){
-        td:first-child{
-            background: #43677D;
+    tr:nth-child(even) {
+        td:first-child {
+            background: #43677d;
         }
-         td:nth-child(4){
-            background: #5D7B90;
+        td:nth-child(4) {
+            background: #5d7b90;
         }
     }
-    td:first-child{
-        @include PC-sm{
+    td:first-child {
+        @include PC-sm {
             background: $base-light !important;
             font-weight: $font-weight-bold;
         }
     }
-    td:nth-child(4){
-        @include PC-sm{
+    td:nth-child(4) {
+        @include PC-sm {
             flex-direction: column !important;
         }
     }
 }
-.table-list{
+.table-list {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     justify-content: center;
-    @include PC-sm{
+    @include PC-sm {
         justify-content: flex-start;
     }
-    &-item{
+    &-item {
         display: flex;
         align-items: center;
         padding: 6px 8px;
-        @include PC-sm{
+        @include PC-sm {
             padding-left: 0;
             padding-right: 24px;
         }
-        &::before{
+        &::before {
             content: "";
             display: block;
             width: 16px;
@@ -1088,8 +1119,8 @@
             background-size: cover;
             margin-right: 4px;
         }
-        &[data-con]{
-            &::before{
+        &[data-con] {
+            &::before {
                 content: attr(data-con);
                 background: $danger-light;
                 border-radius: 3px;
@@ -1102,52 +1133,52 @@
         }
     }
 }
-.accordion{
-    thead{
-        @include PC-sm{
+.accordion {
+    thead {
+        @include PC-sm {
             display: none;
         }
     }
-    tr:last-child{
-        @include PC-sm{
+    tr:last-child {
+        @include PC-sm {
             margin-bottom: 0;
         }
     }
 }
-.combo-list{
+.combo-list {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     background: lighten($color: $base, $amount: 2%);
-    &-group{
-        &:first-child{
+    &-group {
+        &:first-child {
             width: 25%;
-            @include PC-sm{
+            @include PC-sm {
                 width: 100%;
             }
         }
-        &:last-child{
+        &:last-child {
             width: 75%;
-            @include PC-sm{
+            @include PC-sm {
                 width: 100%;
             }
         }
     }
-    &-item{
+    &-item {
         color: $white;
         text-align: center;
-        span{
+        span {
             display: block;
             padding: 6px 0;
         }
     }
-    &-title{
+    &-title {
         display: flex;
         align-items: center;
         justify-content: center;
         background: $gray-800;
         padding: 8px 0;
-        &::before{
+        &::before {
             content: "";
             display: block;
             width: 16px;
@@ -1156,13 +1187,13 @@
             background-size: cover;
             margin-right: 4px;
         }
-        &[data-con="none"]{
-            &:before{
+        &[data-con="none"] {
+            &:before {
                 display: none !important;
             }
         }
-        &[data-con]{
-            &::before{
+        &[data-con] {
+            &::before {
                 content: attr(data-con);
                 background: $danger-light;
                 border-radius: 3px;
