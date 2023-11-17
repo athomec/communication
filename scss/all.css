@@ -28138,6 +28138,8 @@ input[readonly] {
 
 .unit-link img {
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .unit-link-title {
@@ -28294,7 +28296,8 @@ input[readonly] {
 
 .multicard-img img {
   height: 100%;
-  max-width: 200%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .multicard-img div {

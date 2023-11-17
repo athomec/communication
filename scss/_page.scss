@@ -634,6 +634,7 @@
     }
     img{
         height: 100%;
+	object-fit: cover;
     }
     &-title {
         display: block;
@@ -769,7 +770,7 @@
         }
         img{
             height: 100%;
-            max-width: 200%;
+            object-fit: cover;
         }
         div {
             position: absolute;
